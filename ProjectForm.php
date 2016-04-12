@@ -112,10 +112,12 @@ button{
 //	) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 //
 //--
-//-- Dumping data for table `pwdemo`
+//-- Dumping data for table `registration`
 //--
-
-//INSERT INTO `pwdemo` (`name`, `pass`) VALUES
+ $name= isset($_GET["email"]) ? $_GET["email"] : '';
+ $pass= isset($_GET["password"]) ? $_GET["password"] : '';
+ $school = isset($_GET[""]) ? $_GET["email"] : '';
+//INSERT INTO `registration` ($name, $pass,$school) VALUES
 //('Hi', '94dd9e08c129c785f7f256e82fbe0a30e6d1ae40'),
 //('asdf', '92429d82a41e930486c6de5ebda9602d55c39986'),
 //('jamie', '99996b911567c83cce17cdf194f314975c57ddf1'),
