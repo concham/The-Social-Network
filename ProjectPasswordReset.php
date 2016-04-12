@@ -67,3 +67,5 @@ button{
 		<br><br>
 		<button id="GRButton"> Submit</button> 
 	</fieldset> 
+	 </body>
+</html>

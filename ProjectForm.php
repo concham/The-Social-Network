@@ -102,3 +102,5 @@ button{
 		<br><br>
 		<button id="GRButton"> Join Now!</button> 
 	</fieldset> 
+ </body>
+</html>
