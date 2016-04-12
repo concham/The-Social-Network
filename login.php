@@ -65,7 +65,11 @@
                   <input type = "submit" value = " Submit "/><br />
                </form>
                <p>Don't have an account? <a href="http://cscilab.bc.edu/~concham/Project/ProjectForm.html"> Register Here </a> </p>
+<<<<<<< Updated upstream
                <p>Forgot your password? <a href="">Get New Password</a></p>
+=======
+               <p>Forgot your password?> <a href="http://cscilab.bc.edu/~concham/Project/ProjectPasswordReset.html">Get New Password</a></p>
+>>>>>>> Stashed changes
                
                <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 					
