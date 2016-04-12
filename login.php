@@ -1,12 +1,4 @@
 <?php
-   define('DB_SERVER', 'localhost:3036');
-   define('DB_USERNAME', 'root');
-   define('DB_PASSWORD', 'rootpassword');
-   define('DB_DATABASE', 'database');
-   $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-?>
-
-<?php
    include("config.php");
    session_start();
    
@@ -72,6 +64,7 @@
                   <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
                   <input type = "submit" value = " Submit "/><br />
                </form>
+               <p>Don't have an account? </p> <a href="http://cscilab.bc.edu/~concham/Project/ProjectForm.html"> Register Here </a>
                
                <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 					
