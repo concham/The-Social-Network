@@ -64,7 +64,7 @@
                   <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
                   <input type = "submit" value = " Submit "/><br />
                </form>
-               <p>Don't have an account? </p> <a href="http://cscilab.bc.edu/~concham/Project/ProjectForm.html"> Register Here </a>
+               <p>Don't have an account? <a href="http://cscilab.bc.edu/~concham/Project/ProjectForm.html"> Register Here </a> </p>
                
                <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 					
