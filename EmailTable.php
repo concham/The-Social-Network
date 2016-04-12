@@ -143,7 +143,9 @@ tr:hover{background-color: #ff7755;}
 		<br><br>
 		<input type="radio" name="School" value="Theo"> School of Theology & Ministry
 		<br><br>
-		
+		<label for="email">Mail Password: </label>
+		<input type="text" name="Password" id="Password" size="30" />		
+		<br><br>
 		<button id="GRButton">Send Your Message!</button> 
 
 
