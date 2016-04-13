@@ -63,17 +63,21 @@ button{
 
 		<legend> Fill Out The Form To Join!</legend>
 		<br>
-		<label for="mynumber">Name: </label>
-		<input type="text" name="mynumber" id="mynumber" size="30" hspace="5" class="input1"/>
+		<label for="firstname">First Name: </label>
+		<input type="text" name="firstname" id="FirstName" size="30" hspace="5" class="input1"/>
+		<br>
+		<br>
+		
+		<label for="lastname">Last Name: </label>
+		<input type="text" name="lastname" id="LirstName" size="30" hspace="5" class="input1"/>
 		<br>
 		<br>
 
 		<label for="email">BC E-Mail Address: </label>
-		<input type="text" name="email" id="username" size="10" hspace="5"/>
-
-
+		<input type="text" name="email" id="UserName" size="10" hspace="5"/>
 		<br>
 		<br>
+		
 		<label for="password">Password: </label>
 		<input type="text" name="password" id="password" size="30" hspace="5" class="input1"/>
 		<br>
