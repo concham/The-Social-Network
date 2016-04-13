@@ -109,24 +109,11 @@ button{
 	</fieldset> 
 	
 	<?php
-	//need on submit to run this function
-	
-	//"CREATE TABLE IF NOT EXISTS `registration` (
-	//`name` varchar(50) DEFAULT NULL,
-  //	`pass` char(40) DEFAULT NULL"
-//	) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-//
-//--
-//-- Dumping data for table `registration`
-//--
+//Form validation, checking to see if value is set
  $name= isset($_GET["email"]) ? $_GET["email"] : '';
  $pass= isset($_GET["password"]) ? $_GET["password"] : '';
  $school = isset($_GET[""]) ? $_GET["email"] : '';
-//INSERT INTO `registration` ($name, $pass,$school) VALUES
-//('Hi', '94dd9e08c129c785f7f256e82fbe0a30e6d1ae40'),
-//('asdf', '92429d82a41e930486c6de5ebda9602d55c39986'),
-//('jamie', '99996b911567c83cce17cdf194f314975c57ddf1'),
-//('billy', '9d989e8d27dc9e0ec3389fc855f142c3d40f0c50');
+
 ?>
 
 
