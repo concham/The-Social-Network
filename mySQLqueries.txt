@@ -7,3 +7,17 @@ Password varchar(30) not null,
 School char(1),
 PRIMARY KEY(ID)
 );
+
+
+"INSERT INTO community(
+FirstName,
+LastName,
+UserName,
+Password,
+School)
+VALUES('"
+FirstName"','"
+LastName"','"
+UserName"','"
+Password"','"
+School"');"
