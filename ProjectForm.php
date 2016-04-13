@@ -69,7 +69,7 @@ button{
 		<br>
 		
 		<label for="lastname">Last Name: </label>
-		<input type="text" name="lastname" id="LirstName" size="30" hspace="5" class="input1"/>
+		<input type="text" name="lastname" id="LastName" size="30" hspace="5" class="input1"/>
 		<br>
 		<br>
 
