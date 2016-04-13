@@ -60,7 +60,7 @@ button{
 <br>
 
 	<fieldset>
-
+	<form>
 		<legend> Fill Out The Form To Join!</legend>
 		<br>
 		<label for="firstname">First Name: </label>
@@ -105,6 +105,7 @@ button{
 		<input type="radio" name="School" value="Theo"> School of Theology & Ministry
 		<br><br>
 		<button id="GRButton"> Join Now!</button> 
+	</form>
 	</fieldset> 
 	
 	<?php
