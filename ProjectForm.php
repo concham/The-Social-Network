@@ -60,7 +60,7 @@ button{
 <br>
 
 	<fieldset>
-	<form>
+	<form method="POST">
 		<legend> Fill Out The Form To Join!</legend>
 		<br>
 		<label for="firstname">First Name: </label>
