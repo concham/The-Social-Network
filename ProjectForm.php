@@ -109,10 +109,12 @@ button{
 	</fieldset> 
 	
 	<?php
-//Form validation, checking to see if value is set
- $name= isset($_GET["email"]) ? $_GET["email"] : '';
- $pass= isset($_GET["password"]) ? $_GET["password"] : '';
- $school = isset($_GET[""]) ? $_GET["email"] : '';
+	function displayForm() {
+
+ $name= isset($_GET["email"]) ? $_GET["email"] : "";
+ $pass= isset($_GET["password"]) ? $_GET["password"] : "";
+ $school = isset($_GET[""]) ? $_GET["email"] : "";
+	}
 
 ?>
 
