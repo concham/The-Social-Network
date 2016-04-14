@@ -65,21 +65,25 @@ button{
 		<label for="firstname">First Name: </label>
 		<input type="text" name="firstname" id="FirstName" size="30" hspace="5" class="input1"/>
 		<br>
+		<p id="firstnameerror"></p>
 		<br>
 		
 		<label for="lastname">Last Name: </label>
 		<input type="text" name="lastname" id="LastName" size="30" hspace="5" class="input1"/>
 		<br>
+		<p id="lastnameerror"></p>
 		<br>
 
 		<label for="email">BC E-Mail Address: </label>
 		<input type="text" name="email" id="UserName" size="10" hspace="5"/>
 		<br>
+		<p id="emailerror"></p>
 		<br>
 		
 		<label for="password">Password: </label>
 		<input type="text" name="password" id="password" size="30" hspace="5" class="input1"/>
 		<br>
+		<p id="passworderror"></p>
 		<br>
 		<label for="confirmation">Confirm Password: </label>
 		<input type="text" name="confirmation" id="confirmation" size="30" hspace="5" class="input1"/>				
