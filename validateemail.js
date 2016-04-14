@@ -10,5 +10,5 @@ function validateEmail(){
 			erroremail.innerHTML = "";
 	
 			return true;
-			
+}
 			
