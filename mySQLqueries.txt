@@ -1,0 +1,23 @@
+CREATE TABLE community(
+ID int not null auto_increment,
+FirstName varchar(30) not null,
+LastName varchar(30) not null,
+UserName varchar(30) not null,
+Password varchar(30) not null,
+School char(1),
+PRIMARY KEY(ID)
+);
+
+
+"INSERT INTO community(
+FirstName,
+LastName,
+UserName,
+Password,
+School)
+VALUES('"
+FirstName"','"
+LastName"','"
+UserName"','"
+Password"','"
+School"');"

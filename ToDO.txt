@@ -1,0 +1,6 @@
+TO DO
+
+1. Check RSS on hw14.php
+2. Consolidate files
+3. Finish event handler to run query on submission of registration form
+
