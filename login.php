@@ -5,10 +5,10 @@
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
-      $myusername = mysqli_real_escape_string($db,$_POST['emauk']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+      $username = mysqli_real_escape_string($db,$_POST['username']);
+      $password = mysqli_real_escape_string($db,$_POST['password']); 
       
-      $sql = "SELECT ID FROM community WHERE UserName = '$myusername' and Password = '$mypassword'";
+      $sql = "SELECT ID FROM community WHERE username = '$username' and password = '$password'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['active'];
