@@ -1,8 +1,7 @@
 <?php
-function connect_to_db( $dbname ){
-	// REMEMBER!!!
+function connect_to_db( $community ){
 	// Change the host, login, and db information
-	$dbc = @mysqli_connect( "localhost", "root", "root", $dbname ) or
+	$dbc = @mysqli_connect( "localhost", "kernanc", "Y5NevHgP", $community ) or
 			die( "Connect failed: ". mysqli_connect_error() );
 	return $dbc;
 }
