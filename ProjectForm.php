@@ -63,19 +63,19 @@ button{
 		<legend> Fill Out The Form To Join!</legend>
 		<br>
 		<label for="firstname">First Name: </label>
-		<input type="text" name="firstname" id="FirstName" size="30" hspace="5" class="input1"/>
+		<input type="text" name="firstname" id="firstname" size="30" hspace="5" class="input1"/>
 		<br>
 		<p id="firstnameerror"></p>
 		<br>
 		
 		<label for="lastname">Last Name: </label>
-		<input type="text" name="lastname" id="LastName" size="30" hspace="5" class="input1"/>
+		<input type="text" name="lastname" id="lastname" size="30" hspace="5" class="input1"/>
 		<br>
 		<p id="lastnameerror"></p>
 		<br>
 
 		<label for="email">BC E-Mail Address: </label>
-		<input type="text" name="email" id="UserName" size="10" hspace="5"/>
+		<input type="text" name="email" id="username" size="10" hspace="5"/>
 		<br>
 		<p id="emailerror"></p>
 		<br>
@@ -91,21 +91,21 @@ button{
 		<br><br>
 		<label>Select the name of your school: </label>
 		<br><br>
-		<input type="radio" name="School" value="A&S" checked class="input2"> Morrissey College of Arts & Sciences 
+		<input type="radio" name="school" value="A&S" checked class="input2"> Morrissey College of Arts & Sciences 
 		<br><br>
-		<input type="radio" name="School" value="Law" class="input2"> Law School
+		<input type="radio" name="school" value="Law" class="input2"> Law School
 		<br><br>
-		<input type="radio" name="School" value="Woods"> Woods College of Advancing Studies
+		<input type="radio" name="school" value="Woods"> Woods College of Advancing Studies
 		<br><br>
-		<input type="radio" name="School" value="Social"> School of Social Work
+		<input type="radio" name="school" value="Social"> School of Social Work
 		<br><br>
-		<input type="radio" name="School" value="CSOM"> Carroll School of Management
+		<input type="radio" name="school" value="CSOM"> Carroll School of Management
 		<br><br>
-		<input type="radio" name="School" value="CSON"> Connell School of Nursing
+		<input type="radio" name="school" value="CSON"> Connell School of Nursing
 		<br><br>
-		<input type="radio" name="School" value="Lynch"> Lynch School of Education
+		<input type="radio" name="school" value="Lynch"> Lynch School of Education
 		<br><br>
-		<input type="radio" name="School" value="Theo"> School of Theology & Ministry
+		<input type="radio" name="school" value="Theo"> School of Theology & Ministry
 		<br><br>
 		<button id="GRButton"> Join Now!</button> 
 	</form>
