@@ -1,7 +1,7 @@
 <?php
 function connect_to_db( $community ){
 	// Change the host, login, and db information
-	$dbc = @mysqli_connect( "localhost", "kernanc", "Y5NevHgP", $community ) or
+	$dbc = @mysqli_connect( "http://cscilab.bc.edu/phpmyadmin", "kernanc", "Y5NevHgP", $community ) or
 			die( "Connect failed: ". mysqli_connect_error() );
 	return $dbc;
 }
