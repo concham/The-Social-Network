@@ -4,12 +4,12 @@ $debug = 1;
 if ( ! isset( $_POST['username'] ) or  
 	 ! isset( $_POST['password'] ) or 
 	( 0 == checklogin( $_POST['username'], $_POST['password'] ) ) ) {
-  header("Location: loginCookieForm.php");
+  header("Location: login.php");
  } else { 
 	
 	// Store the login information in cookies	
 	setcookie('loginCookieUser', $_POST['username']);
-  	header("Location: showcustomer.php");
+  	header("Location: HW14.php");
 }
 // checklogin sees if an entry exists with the name password pair passed.
 // returns true if so, false otherwise.
