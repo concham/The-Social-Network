@@ -1,31 +1,28 @@
 <?php
 
-<script type="text/javascript">
-document.getElementById("GRButton").addEventListener("click", registerNewUswer);
-function registerNewUser() {
+function connect_to_db($connect){
+	$connect = mysqli_connect("cscilab.bc.edu/phpmyadmin", "kernanc", "Y5NevHgP", "community");
+	if (! $connect) {
+		die("Connect failed: ". mysqli_connect_error());
+	}
 
-var FirstName = document.getElementById("FirstName");
-var LastName = document.getElementById("LastName");
-var UserName = document.getElementById("UserName");
-var Password = document.getElementById("Password");
-var School = document.getElementsByName("School");
-	for (var i = 0; i < School.length; i++) {
-		if (School[i].checked) {
-			School = School[i].value;
-			}
-		}	
-var sql = "INSERT INTO community(FirstName, LastName, UserName, Password, School) VALUES('"FirstName"','"LastName"','"UserName"','"Password"','"School"');";
-}
-</script>
-
-$connect = mysqli_connect("localhost","my_user","my_password","my_db");
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-
-// Perform queries 
-mysqli_query($connect sql);
+function perform_query($connect, $query){
+	$firstname = isset($_POST["firstname"]) ? $_POST["firstname"] : "";
+	$lastname = isset($_POST["lastname"]) ? $_POST["lastname"] : "";
+	$email = isset($_POST["email"]) ? $_POST["email"] : "";
+	$password = isset($_POST["password"]) ? $_POST["password"] : "";
+	$encryptpassword = sha1($password);
+	$school = isset($_POST["school"]) ? $_POST["school"] : "";
+	
+	$query = "INSERT INTO community(firstname, lastname, email, password, school)
+		VALUES('$firstname','$lastname','$email','$encryptpassword','$school');"
+	
+	if (mysqli_query($connect, $query)) {
+		echo "You have successfully joined The Social Network";
+	} else {
+		 echo "Error: " . $sql . "<br>" . mysqli_error($connect);
+	}
+	
 mysqli_close($connect);
+
 ?>
