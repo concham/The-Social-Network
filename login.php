@@ -65,7 +65,7 @@
                   <input type = "submit" value = " Submit "/><br />
                </form>
                <p>Forgot your password?</p>
-               <p>Don't have an account? <a href="http://cscilab.bc.edu/~kernanc/project/ProjectForm.php"> Register Here </a> </p>
+               <p>Don't have an account? <a href="http://cscilab.bc.edu/~kernanc/project/TheSocialNetwork/ProjectForm.php"> Register Here </a> </p>
                
                <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 					
