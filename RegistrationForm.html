@@ -115,7 +115,7 @@ button{
     <script type="text/javascript">
 	$(document).ready(function(){
 	  	$("#joinbutton").click(function() {
-	  		$.getJSON("project/TheSocialNetwork/RegistrationHandler.php");
+	  		$.getJSON("project/TheSocialNetwork/RegistrationHandler.php", function connect_to_db($connect), function perform_query($connect, $query));
 	  	});
 	});
     </script>
