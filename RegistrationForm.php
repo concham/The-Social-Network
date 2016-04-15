@@ -75,7 +75,7 @@ button{
 		<br>
 
 		<label for="email">BC E-Mail Address: </label>
-		<input type="text" name="email" id="username" size="10" hspace="5"/>
+		<input type="text" name="email" id="email" size="10" hspace="5"/>
 		<br>
 		<p id="emailerror"></p>
 		<br>
@@ -107,16 +107,17 @@ button{
 		<br><br>
 		<input type="radio" name="school" value="Theo"> School of Theology & Ministry
 		<br><br>
-		<button id="GRButton"> Join Now!</button> 
+		<button id="joinbutton"> Join Now!</button> 
 	</form>
 	</fieldset> 
  </body>
 </html>
+
 <?php
 	function displayForm() {
 
-		 $name= isset($_GET["email"]) ? $_GET["email"] : "";
-		 $pass= isset($_GET["password"]) ? $_GET["password"] : "";
+		 $username= isset($_GET["email"]) ? $_GET["email"] : "";
+		 $password= isset($_GET["password"]) ? $_GET["password"] : "";
 		 $school = isset($_GET[""]) ? $_GET["email"] : "";
 	}
 
