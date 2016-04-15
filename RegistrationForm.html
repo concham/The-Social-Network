@@ -115,17 +115,9 @@ button{
     <script type="text/javascript">
 	$(document).ready(function(){
 	  	$("#joinbutton").click(function() {
-	  		$.getJSON("RegistrationHandler.php", function(data) {
-				$.each(data, function(i, country){
-					$("#results").append("<tr><td>" + country.CountryName + "</td><td>" + country.Continent + "</td></tr>");
-							});
-						
-						})
-						.fail(function() {
-								console.log("getJSON error");
-						});
-					});
-			});
+	  		$.getJSON("RegistrationHandler.php");
+	  	});
+	});
     </script>
  </body>
 </html>
