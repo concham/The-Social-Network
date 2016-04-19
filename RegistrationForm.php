@@ -59,7 +59,7 @@ button{
 <br>
 
 	<fieldset>
-	<form method="POST">
+	<form id="ajaxRequestForm" method="POST">
 		<legend> Fill Out The Form To Join!</legend>
 		<br>
 		<label for="firstname">First Name: </label>
@@ -107,20 +107,42 @@ button{
 		<br><br>
 		<input type="radio" name="school" value="Theo"> School of Theology & Ministry
 		<br><br>
-		<button id="GRButton"> Join Now!</button> 
+		<button id="registerbutton"> Join Now!</button> 
 	</form>
 	</fieldset> 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript">
-	$(document).ready(function(){
-	  	$("#joinbutton").click(function() {
-	  		$.getJSON("project/TheSocialNetwork/RegistrationHandler.php", function (data) {
-	  			$.each (data, function)
-	  	});
-	});
-    </script>
+	<div id="results"></div>
 	
- </body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#registerbutton").click(function(){
+			
+		//get the form data and then serialize that
+            	var dataString = $("#ajaxRequestForm").serialize();
+            	
+                //start ajax request
+                var request = $.ajax({
+                    url: "project/TheSocialNetwork/RegistrationHandler.php",
+                    type: "POST",
+                    data: dataString,
+                    dataType: "json"
+                    });
+                    
+                request.done (function(data) {      		
+                	$("#results").html("");
+				$("#results").append("<b>First Name:</b> " + data.communityInfo.firstname + "<br>");
+                    		$("#results").append("<b>Last Name:</b> " + data.communityInfo.lastname  + "<br>");
+                    		$("#results").append("<b>Username:</b> " + data.communityInfo.username  + "<br>");
+                    		$("#results").append("<b>School:</b> " + data.communityInfo.school  + "<br>");
+                });
+                    
+                request.fail (function(jqXHR, textStatus) {
+						alert( "Request failed: " + textStatus );
+		});
+			});
+		});
+    </script>
+</body>
 </html>
 
 <?php
