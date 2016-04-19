@@ -50,7 +50,7 @@ button{
 }
 	
 	</style>
-<!-- <script type="text/javascript" src="JS/HWForm.js"></script> -->
+
 </head>
 
 <h1> The Social Network</h1>
@@ -75,7 +75,7 @@ button{
 		<br>
 
 		<label for="email">BC E-Mail Address: </label>
-		<input type="text" name="email" id="email" size="10" hspace="5"/>
+		<input type="text" name="email" id="username" size="10" hspace="5"/>
 		<br>
 		<p id="emailerror"></p>
 		<br>
@@ -107,11 +107,10 @@ button{
 		<br><br>
 		<input type="radio" name="school" value="Theo"> School of Theology & Ministry
 		<br><br>
-		<button id="joinbutton"> Join Now!</button> 
+		<button id="GRButton"> Join Now!</button> 
 	</form>
-	</fieldset>
-	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	</fieldset> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript">
 	$(document).ready(function(){
 	  	$("#joinbutton").click(function() {
@@ -119,6 +118,7 @@ button{
 	  	});
 	});
     </script>
+	
  </body>
 </html>
 

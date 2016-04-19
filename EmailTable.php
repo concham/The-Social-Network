@@ -217,19 +217,6 @@ tr:hover{background-color: #ff7755;}
 		<br><br>
 		<button id="GRButton">Send Your Message!</button> 
 		</fieldset>	
-<!-- 
-<?php
-										echo "<h2>Your Input:</h2>";
-										echo $subject;
-										echo "<br>";
-										echo $message;
-										echo "<br>";
-										echo $school;
-										echo "<br>";
-										echo $password;
-										echo "<br>";
-										?>
- -->
 
 
 

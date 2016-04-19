@@ -4,7 +4,7 @@ $debug = 1;
 if ( ! isset( $_POST['username'] ) or  
 	 ! isset( $_POST['password'] ) or 
 	( 0 == checklogin( $_POST['username'], $_POST['password'] ) ) ) {
-  header("Location: login.php");
+  header("Location: NewLogin.php");
  } else { 
 	
 	// Store the login information in cookies	
