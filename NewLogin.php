@@ -54,7 +54,7 @@
 			  <div class="col-lg-10 col-lg-offset-2">
 
 	<br>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" value="Submit" class="btn btn-primary">Submit</button>
 
 <br>
 			  </div>
