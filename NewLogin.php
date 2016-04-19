@@ -60,7 +60,7 @@
 			  </div>
 	  <br><br>
 
-				<p>Don't have an account? <a href="http://cscilab.bc.edu/~concham/Project/ProjectForm.php"> Register Here! </a> </p>
+				<p>Don't have an account? <a href="http://cscilab.bc.edu/~concham/Project/RegistrationForm.php"> Register Here! </a> </p>
 
 				<p>Forgot Your Password? <a href="http://cscilab.bc.edu/~concham/Project/ProjectPasswordReset.php"> Click Here! </a> </p>
 		  </fieldset>
