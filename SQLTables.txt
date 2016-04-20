@@ -1,7 +1,14 @@
+DROP TABLE IF EXISTS Member;
+DROP TABLE IF EXISTS Student;
+DROP TABLE IF EXISTS Staff;
+			DROP TABLE IF EXISTS Topic;
+DROP TABLE IF EXISTS History;
+
 CREATE TABLE Member
 (
 Type varchar(10),
-ID int
+ID int auto_increment,
+PRIMARY KEY(ID)
 );
 
 CREATE TABLE Student
@@ -13,7 +20,8 @@ School varchar(100),
 GradYear int,
 Email varchar(30),
 Gender varchar(10),
-Birth Date
+Birth Date,
+FOREIGN KEY (ID) references Member(ID)
 );
 
 CREATE TABLE Staff
@@ -24,15 +32,16 @@ LastName varchar(20),
 School varchar(100),
 Email varchar(30),
 Gender varchar(10),
-Birth Date
+Birth Date,
+FOREIGN KEY (ID) references Member(ID)
 );
 
-CREATE TABLE Topic
-(
-MarketPlace varchar(50),
-Announcements varchar(50),
-ClassRegistration varchar(50)
-);
+			CREATE TABLE Topic
+			(
+			MarketPlace varchar(50),
+			Announcements varchar(50),
+			ClassRegistration varchar(50)
+			);
 
 CREATE TABLE History
 (
@@ -42,5 +51,17 @@ LastName varchar(20),
 Topic varchar(50),
 CommentDate Date,
 Comment varchar(8000),
-RecordNumber int
+RecordNumber int auto_increment,
+FOREIGN KEY (ID) references Member(ID)
 );
+
+
+Morrissey College of Arts & Sciences 
+Law School
+Woods College of Advancing Studies
+School of Social Work
+Carroll School of Management
+Connell School of Nursing
+Lynch School of Education
+School of Theology & Ministry
+
