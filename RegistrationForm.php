@@ -75,7 +75,7 @@ button{
 		<br>
 
 		<label for="email">BC E-Mail Address: </label>
-		<input type="text" name="email" id="username" size="30" hspace="5" class="input1"/>
+		<input type="text" name="email" id="email" size="30" hspace="5" class="input1"/>
 		<br>
 		<p id="emailerror"></p>
 		<br>
@@ -115,31 +115,27 @@ button{
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     	<script type="text/javascript">
 		$(document).ready(function(){
-			$("#registerbutton").click(function(){
+			$("#registerbutton").click(function( event ){
+				event.preventDefault();
 			
-		//get the form data and then serialize that
-            	var dataString = $("#ajaxRequestForm").serialize();
+				//get the form data and then serialize that
+            	//var dataString = $("#ajaxRequestForm").serialize();
             	
                 //start ajax request
-                var request = $.ajax({
-                    url: "project/TheSocialNetwork/RegistrationHandler.php",
-                    type: "POST",
-                    data: dataString,
-                    dataType: "json"
-                    });
-                    
-                request.done (function(data) {      		
-                	$("#results").html("");
-				$("#results").append("<b>First Name:</b> " + data.communityInfo.firstname + "<br>");
-                    		$("#results").append("<b>Last Name:</b> " + data.communityInfo.lastname  + "<br>");
-                    		$("#results").append("<b>Username:</b> " + data.communityInfo.username  + "<br>");
-                    		$("#results").append("<b>School:</b> " + data.communityInfo.school  + "<br>");
-                });
-                    
-                request.fail (function(jqXHR, textStatus) {
-						alert( "Request failed: " + textStatus );
-		});
-			});
+                var request = $.post("RegistrationHandler.php",
+                    { 
+                    	firstname: $("#firstname").val(),
+                    	lastname: $("#lastname").val(),
+                    	email: $("#email").val(),
+                    	password: $("#password").val(),
+                    	confirmation: $("#confirmation").val(),
+                    	school: $("#school").val()
+                    },
+                    function(data,status) {      		
+                		$("#results").html("data" + data + " status", status);
+                	}
+                );
+            });
 		});
     </script>
 </body>
