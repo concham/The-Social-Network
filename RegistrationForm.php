@@ -75,7 +75,7 @@ button{
 		<br>
 
 		<label for="email">BC E-Mail Address: </label>
-		<input type="text" name="email" id="username" size="30" hspace="5"/>
+		<input type="text" name="email" id="username" size="30" hspace="5" class="input1"/>
 		<br>
 		<p id="emailerror"></p>
 		<br>

@@ -1,0 +1,46 @@
+CREATE TABLE Member
+(
+Type varchar(10),
+ID int
+);
+
+CREATE TABLE Student
+(
+ID int,
+FirstName varchar(20),
+LastName varchar(20),
+School varchar(100),
+GradYear int,
+Email varchar(30),
+Gender varchar(10),
+Birth Date
+);
+
+CREATE TABLE Staff
+(
+ID int,
+FirstName varchar(20),
+LastName varchar(20),
+School varchar(100),
+Email varchar(30),
+Gender varchar(10),
+Birth Date
+);
+
+CREATE TABLE Topic
+(
+MarketPlace varchar(50),
+Announcements varchar(50),
+ClassRegistration varchar(50)
+);
+
+CREATE TABLE History
+(
+ID int,
+FirstName varchar(20),
+LastName varchar(20),
+Topic varchar(50),
+CommentDate Date,
+Comment varchar(8000),
+RecordNumber int
+);
