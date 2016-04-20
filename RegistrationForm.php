@@ -59,7 +59,7 @@ button{
 <br>
 
 	<fieldset>
-	<form id="ajaxRequestForm" method="POST">
+	<form id="ajaxRequestForm" method="post">
 		<legend> Fill Out The Form To Join!</legend>
 		<br>
 		<label for="firstname">First Name: </label>
