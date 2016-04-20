@@ -3,7 +3,7 @@
 function connect_to_db( $dbname ){
 	$dbc = @mysqli_connect( "localhost", "kernanc", "Y5NevHgP", $dbname )
 		or die("Connect failed: ". mysqli_connect_error());
-	return $dbc
+	return $dbc;
 }
 
 function disconnect_from_db( $dbc, $result ){
