@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS History;
 CREATE TABLE Member
 (
 Type varchar(10),
-ID int auto_increment,
+ID int,
 PRIMARY KEY(ID)
 );
 
@@ -20,7 +20,7 @@ School varchar(100),
 GradYear int,
 Email varchar(30),
 Gender varchar(10),
-Birth Date,
+BirthDate,
 FOREIGN KEY (ID) references Member(ID)
 );
 
@@ -32,7 +32,7 @@ LastName varchar(20),
 School varchar(100),
 Email varchar(30),
 Gender varchar(10),
-Birth Date,
+BirthDate,
 FOREIGN KEY (ID) references Member(ID)
 );
 
@@ -48,6 +48,7 @@ CREATE TABLE History
 ID int,
 FirstName varchar(20),
 LastName varchar(20),
+Type varchar(10),
 Topic varchar(50),
 CommentDate Date,
 Comment varchar(8000),
@@ -56,12 +57,12 @@ FOREIGN KEY (ID) references Member(ID)
 );
 
 
-Morrissey College of Arts & Sciences 
-Law School
-Woods College of Advancing Studies
-School of Social Work
-Carroll School of Management
-Connell School of Nursing
-Lynch School of Education
+Morrissey College of Arts & Sciences,
+Law School,
+Woods College of Advancing Studies,
+School of Social Work,
+Carroll School of Management,
+Connell School of Nursing,
+Lynch School of Education,
 School of Theology & Ministry
 
