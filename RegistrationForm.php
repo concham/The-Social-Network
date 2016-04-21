@@ -101,11 +101,11 @@ button{
 		<br><br>
 		<input type="radio" name="school" value="CSOM"> Carroll School of Management
 		<br><br>
-		<input type="radio" name="school" value="CSON"> Connell School of Nursing
+		<input type="radio" name="school" value="Nursing"> Connell School of Nursing
 		<br><br>
 		<input type="radio" name="school" value="Lynch"> Lynch School of Education
 		<br><br>
-		<input type="radio" name="school" value="Theo"> School of Theology & Ministry
+		<input type="radio" name="school" value="Theology"> School of Theology & Ministry
 		<br><br>
 		<button id="registerbutton"> Join Now!</button> 
 	</form>
