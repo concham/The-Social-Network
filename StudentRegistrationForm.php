@@ -2,7 +2,7 @@
 <html lang="en" xml:lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>HW Form</title>
+	<title>Student Registration</title>
 
 <style>
 body {
