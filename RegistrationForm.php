@@ -81,12 +81,12 @@ button{
 		<br>
 		
 		<label for="password">Password: </label>
-		<input type="text" name="password" id="password" size="30" hspace="5" class="input1"/>
+		<input type="password" name="password" id="password" size="30" hspace="5" class="input1"/>
 		<br>
 		<p id="passworderror"></p>
 		<br>
 		<label for="confirmation">Confirm Password: </label>
-		<input type="text" name="confirmation" id="confirmation" size="30" hspace="5" class="input1"/>				
+		<input type="password" name="confirmation" id="confirmation" size="30" hspace="5" class="input1"/>				
 		<br>
 		<br><br>
 		<label>Select the name of your school: </label>
