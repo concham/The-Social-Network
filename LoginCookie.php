@@ -1,4 +1,5 @@
 <?php
+include('dbconn.php')
 $debug = 1;
 
 if ( ! isset( $_POST['username'] ) or  
