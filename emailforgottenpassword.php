@@ -4,6 +4,8 @@ function emailpassword(){
 	   if($_SERVER["REQUEST_METHOD"] == "POST") {
       
       $email = mysqli_real_escape_string($db,$_POST['email']);
+      $password = mysqli_real_escape_string($db,$_POST['password']);
+      
 	$sql= "SELECT ID FROM community WHERE $email = 'email'";
 	$count = mysqli_num_rows($result);
 	 if($count == 1) {
