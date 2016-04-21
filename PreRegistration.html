@@ -67,6 +67,7 @@
 	</form>
 	
 <script type="text/javascript">
+	document.getElementById("submitposition").addEventListener("click", redirect);
 	function redirect() {
 		var radios = document.getElementsByName("position");
 		for (var i = 0; i < radios.length; i++) {
