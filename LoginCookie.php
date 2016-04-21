@@ -23,18 +23,4 @@ function checklogin($username, $password){
 	disconnectFromDB($dbc);
 	return($matches == 1);
 }
-// Modified connectToDB takes database as an argument, returns database connection
-function connectToDB($community){
-	$dbc= @mysqli_connect("http://cscilab.bc.edu/phpmyadmin", "kernanc", "Y5NevHgP", $community) or
-					die("Connect failed: ". mysqli_connect_error());
-	return ($dbc);
-}
-function disconnectFromDB($dbc){
-	mysqli_close($dbc);
-}
-// Modified PeformQuery, takes the database and query as arguments, returns result set
-function performQuery($dbc, $query){
-	//echo "My query is >$query< <br />";	
-	$result = mysqli_query($dbc, $query) or die("bad query".mysqli_error($dbc));
-	return ($result);
-}?>
+
