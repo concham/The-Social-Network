@@ -2,6 +2,6 @@
    session_start();
    
    if(session_destroy()) {
-      header("Location: NetworkLogin.php");
+      header("Location: NewLogin.php");
    }
 ?>
