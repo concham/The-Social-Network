@@ -54,7 +54,6 @@
 </head>
 
 <body>
-<script type="text/javascript">
 	<h1> Are you a student or a staff member? </h1>
 	<form onsubmit="redirect()">
 	<input type="radio" name="position" value="Student"/> Student
@@ -67,7 +66,7 @@
 	<input type="submit" id="submitposition" value="Continue"/>
 	</form>
 	
-
+<script type="text/javascript">
 	function redirect() {
 		var radios = document.getElementsByName("position");
 		for (var i = 0; i < radios.length; i++) {
