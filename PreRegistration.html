@@ -56,7 +56,7 @@
 <body>
 
 	<h1> Are you a student or a staff member? </h1>
-	<form>
+	<form onsubmit="redirect()">
 	<input type="radio" name="position" value="Student"/> Student
 	<br><br>
 	<input type="radio" name="position" value="Staff"/> Staff
@@ -64,13 +64,11 @@
 	<label> Enter Your Boston College Eagle ID: </label>
 	<input type="text" name="bcid" id="bcid" size="30" hspace="5" required/>
 	<br><br>
-	<input type="submit" id="submitposition"> Continue </button>
+	<input type="submit" id="submitposition" value="Continue"/>
 	</form>
 	
 <script type="text/javascript">
-	document.getElementById("submitposition").addEventListener("click", redirect);
-	
-	function redirect () {
+	function redirect() {
 		var radios = document.getElementsByName("position");
 		for (var i = 0; i < radios.length; i++) {
 			if (radios[i].checked) {
