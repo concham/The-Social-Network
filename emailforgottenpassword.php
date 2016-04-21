@@ -1,6 +1,7 @@
 <?php 
 // NOT COMPLETE FUNCTION, does not change the password
 function emailpassword(){
+	include('dbconn.php')
 	   if($_SERVER["REQUEST_METHOD"] == "POST") {
       
       $email = mysqli_real_escape_string($db,$_POST['email']);
