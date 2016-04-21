@@ -129,7 +129,7 @@ button{
                     	email: $("#email").val(),
                     	password: $("#password").val(),
                     	confirmation: $("#confirmation").val(),
-                    	school: $("input[name='school']:checked").val();
+                    	school: $("input[name='school']:checked").val()
                     },
                     function(data,status) {      		
                 		$("#results").html("data" + data + " status", status);
