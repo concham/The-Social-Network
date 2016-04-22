@@ -151,3 +151,15 @@ button{
 
 ?>
 
+<script>
+$('#registerbutton').click(function(){
+    validateEmail();
+    validateFirstName();
+    validateLastName();
+    validatepassword();
+});	
+</script>
+<script type="text/javascript" src="validateemail.js"></script>
+<script type="text/javascript" src="validatefirstname.js"></script>
+<script type="text/javascript" src="validatelastname.js"></script>
+<script type="text/javascript" src="validatepassword.js"></script>
