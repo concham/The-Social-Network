@@ -141,17 +141,7 @@ button{
 </body>
 </html>
 
-<?php
-	function displayForm() {
-
-		 $name= isset($_GET["email"]) ? $_GET["email"] : "";
-		 $pass= isset($_GET["password"]) ? $_GET["password"] : "";
-		 $school = isset($_GET[""]) ? $_GET["email"] : "";
-	}
-
-?>
-
-<script>
+/*<script>
 $('#registerbutton').click(function(){
     validateEmail();
     validateFirstName();
@@ -162,4 +152,4 @@ $('#registerbutton').click(function(){
 <script type="text/javascript" src="validateemail.js"></script>
 <script type="text/javascript" src="validatefirstname.js"></script>
 <script type="text/javascript" src="validatelastname.js"></script>
-<script type="text/javascript" src="validatepassword.js"></script>
+<script type="text/javascript" src="validatepassword.js"></script>*/
