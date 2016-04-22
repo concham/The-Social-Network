@@ -62,7 +62,7 @@
 
 				<p>Don't have an account? <a href="http://cscilab.bc.edu/~kernanc/project/TheSocialNetwork/PreRegistration.html"> Register Here! </a> </p>
 
-				<p>Forgot Your Password? <a href="http://cscilab.bc.edu/~concham/Project/ProjectPasswordReset.php"> Click Here! </a> </p>
+				<p>Forgot Your Password? <a href="http://cscilab.bc.edu/~concham/Project/ProjectPasswordReset.html"> Click Here! </a> </p>
 		  </fieldset>
 		</form>
 		
