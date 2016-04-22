@@ -1,7 +1,6 @@
 DROP TABLE IF EXISTS Member;
 DROP TABLE IF EXISTS Student;
 DROP TABLE IF EXISTS Staff;
-			DROP TABLE IF EXISTS Topic;
 DROP TABLE IF EXISTS History;
 
 
@@ -16,7 +15,7 @@ School of Theology & Ministry
 
 CREATE TABLE Member
 (
-Type varchar(10),
+Position varchar(10),
 ID int,
 PRIMARY KEY(ID)
 );
@@ -32,6 +31,7 @@ GradYear int,
 Email varchar(30),
 Gender varchar(10),
 BirthDate Date,
+Password varchar(30),
 FOREIGN KEY (ID) references Member(ID)
 );
 
@@ -45,6 +45,7 @@ School varchar(100),
 Email varchar(30),
 Gender varchar(10),
 BirthDate Date,
+Password varchar(30),
 FOREIGN KEY (ID) references Member(ID)
 );
 
@@ -52,9 +53,6 @@ FOREIGN KEY (ID) references Member(ID)
 CREATE TABLE History
 (
 ID int,
-FirstName varchar(20),
-LastName varchar(20),
-Type varchar(10),
 Topic varchar(50),
 CommentDate Date,
 Comment varchar(8000),
