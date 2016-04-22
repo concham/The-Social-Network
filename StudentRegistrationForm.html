@@ -135,10 +135,8 @@ button{
                 		$("#results").html("data" + data + " status", status);
                 	}
                 );
-            });
-		});
-		
-		function validateEmail(){
+                
+                	function validateEmail(){
 			var email= document.getElementById("email").value ;
 			
 			if (email == "") {
@@ -150,7 +148,11 @@ button{
 			erroremail.innerHTML = "";
 	
 			return true;
-}
+                	}
+            });
+		});
+		
+
     </script>
 </body>
 </html>
