@@ -99,7 +99,7 @@ function displayLoginForm($email, $password)
 		</form>
 		
 </body>
-</html>//
+</html>*/
 
 
 
