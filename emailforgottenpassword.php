@@ -19,7 +19,7 @@ function createnewpassword(){
 	if (true == perform_query( $dbc, $query ) ) {
 			$returnstatus = array( 'status'=> "success", 'data'=> "You have successfully changed your password");
 			sendpasswordinemail();
-			echo $returnstatus();
+			echo $returnstatus;
 	} else {
 			$returnstatus = array( 'status'=> "failure", 'data'=> "Error: " . $sql . "<br>" . mysqli_error($connect));
 	}
