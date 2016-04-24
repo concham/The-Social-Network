@@ -12,16 +12,18 @@
 	<fieldset>
 		<legend>Create School Mail</legend>
 		<label> Subject</label>
-		<input type="text" id="subject">
+		<input type="text" id="subject"><br>
+		<p id="subjecterror"></p>
 		
 		<br>
 		<br>
 		<label> Your Message</label>
-		<input type="textarea" id="message">
+		<input type="textarea" id="message"><br>
+		<p id="messageerror"></p>
 		
 	<br>
 	<br>
-		<p> School </p>
+		<p> Choose Schools </p>
 		
 		<input type="checkbox" name="school" value="A&S"> Morrissey College of Arts & Sciences <br>
 		<input type="checkbox" name="school" value="Law"> Law School <br>
@@ -31,6 +33,7 @@
 		<input type="checkbox" name="school" value="Nursing"> Connell School of Nursing <br>
 		<input type="checkbox" name="school" value="Lynch"> Lynch School of Education <br>
 		<input type="checkbox" name="school" value="Theology"> School of Theology & Ministry <br>
+		<p id="checkboxerror"> </p>
 		
 		 
 		<br>
@@ -46,17 +49,17 @@
 <script>
 	function validation() {
 	
-	var subject = document.getElementById("subject").value
-	var message = document.getElementById("message").value
+	var subject = document.getElementById("subject").value;
+	var message = document.getElementById("message").value;
 	var errorsubject=document.getElementById("subjecterror");
 	var errormessage = document.getElementById("messageerror");
-	var errorcheckbox= documnet.getElementById("checkboxerror");
+	var errorcheckbox= document.getElementById("checkboxerror");
 	//subject validation
-	if (subject=""){
+	if (subject==""){
 				errorsubject.innerHTML = "Please enter an Email";
 				}
 	//message validation
-	if (message="") {
+	if (message=="") {
 		errormessage.innerHTML= "Please enter a message to send";
 		}
 					
