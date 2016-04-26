@@ -22,7 +22,7 @@
 function displayLoginForm($email, $password)
 {?>
 	<fieldset>
-	<form action="loginCookie.php" method="post">
+	<form action="LoginCookie.php" method="post">
 		Email:<input type="text" name="email" type="text" size="20" value="<?php echo $email; ?>"/>
 		Password:<input name="password" type="password" size="20" value="<?php echo $password; ?>"/><br />
 		<input name="submitted" type="hidden" size="20" value="true" /><br>
