@@ -28,7 +28,7 @@ function displayLoginForm($email, $password)
 		<input name="submitted" type="hidden" size="20" value="true" /><br>
 		<input type="submit" name="Login" value="Login" />
 		
-	<p>Don't have an account? <a href="http://cscilab.bc.edu/~kernanc/project/TheSocialNetwork/PreRegistration.html"> Register Here! </a> </p>
+	<p>Don't have an account? <a href="http://cscilab.bc.edu/~kernanc/project/TheSocialNetwork/RegistrationForm.html"> Register Here! </a> </p>
 	<p>Forgot Your Password? <a href="http://cscilab.bc.edu/~concham/Project/ProjectPasswordReset.html"> Click Here! </a> </p>
 	</form>
 	</fieldset>
