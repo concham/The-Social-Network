@@ -21,7 +21,7 @@ function checklogin($email, $password){
 		"select * FROM community where email='$email' and password='$encodepassword'");
 	$matches = mysqli_num_rows($result);
 	mysqli_free_result($result);
-	disconnectFromDB($dbc);
+	disconnect_from_db($dbc);
 	return($matches == 1);
 }
 
