@@ -132,7 +132,7 @@ button{
                 //start ajax request
                 var request = $.post("RegistrationHandler.php",
                     { 
-                    	school: $("input[name='membertype']:checked").val(),
+                    	membertype: $("input[name='membertype']:checked").val(),
                     	firstname: $("#firstname").val(),
                     	lastname: $("#lastname").val(),
                     	email: $("#email").val(),
