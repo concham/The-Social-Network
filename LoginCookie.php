@@ -17,7 +17,7 @@ if ( ! isset( $_POST['email'] ) or
 function checklogin($email, $password){
 	$dbc = connect_to_db("kernanc");
 	$encodepassword = sha1($password);
-	$result = performQuery($dbc, 
+	$result = perform_query($dbc, 
 		"select * FROM community where email='$email' and password='$encodepassword'");
 	$matches = mysqli_num_rows($result);
 	mysqli_free_result($result);
