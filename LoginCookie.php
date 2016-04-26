@@ -6,8 +6,9 @@ if ( ! isset( $_POST['email'] ) or
 	 ! isset( $_POST['password'] ) or 
 	( 0 == checklogin( $_POST['email'], $_POST['password'] ) ) ) {
   header("Location: NewLogin.php");
+
  } else { 
-	
+
 	// Store the login information in cookies	
 	setcookie('loginCookieUser', $_POST['email']);
   	header("Location: homepage.php");
