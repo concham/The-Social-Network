@@ -62,6 +62,13 @@ button{
 	<form id="ajaxRequestForm" method="post">
 		<legend> Fill Out The Form To Join!</legend>
 		<br>
+		
+		<label for="membertype">You are a: </label>
+		<input type="radio" name="membertype" value="Student"> Student
+		<br><br>
+		<input type="radio" name="membertype" value="Staff"> Staff
+		<br><br>
+		
 		<label for="firstname">First Name: </label>
 		<input type="text" name="firstname" id="firstname" size="30" hspace="5" class="input1"/>
 		<br>
@@ -124,6 +131,7 @@ button{
                 //start ajax request
                 var request = $.post("RegistrationHandler.php",
                     { 
+                    	school: $("input[name='membertype']:checked").val(),
                     	firstname: $("#firstname").val(),
                     	lastname: $("#lastname").val(),
                     	email: $("#email").val(),
