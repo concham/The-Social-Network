@@ -1,5 +1,5 @@
 <?php
-include('dbconn.php')
+include('dbconn.php');
 $debug = 1;
 
 if ( ! isset( $_POST['email'] ) or  
