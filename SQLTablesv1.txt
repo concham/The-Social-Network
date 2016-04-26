@@ -1,8 +1,7 @@
 DROP TABLE IF EXISTS Member;
 DROP TABLE IF EXISTS Comment;
 
-
-Insert into Member (membertype, firstname, lastname, email, password, school) values ('Student', 'Sharon', 'Butler', 'sbutler0@utexas.edu', 'AABBCC', 'Morrissey College of Arts & Sciences');
+Insert into Member (membertype, firstname, lastname, email, password, school) values ('Student', 'Sharon', 'Butler', 'sbutler0@utexas.edu', '398ff1978d3f27e693815c1a061cddd0de12711a', 'Morrissey College of Arts & Sciences');
 
 CREATE TABLE Member
 (
@@ -16,7 +15,7 @@ school ENUM('Morrissey College of Arts & Sciences', 'Law School', 'Woods College
 PRIMARY KEY(ID)
 );
 
-insert into Comment (ID, comment, commentdate, recordnumber) values ('100', 'AABBCCDDEEFFGG', '01/01/2016', '1000');
+Insert into Comment (ID, comment, commentdate, recordnumber) values ('1', 'AABBCCDDEEFF', '02/02/2016', '1');
 
 CREATE TABLE Comment
 (
@@ -27,4 +26,3 @@ recordnumber int NOT NULL AUTO_INCREMENT,
 FOREIGN KEY (ID) references Member(ID),
 PRIMARY KEY(recordnumber)
 );
-
