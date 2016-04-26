@@ -21,6 +21,6 @@ function checklogin($email, $password){
 	$result = perform_query($dbc, $query);
 	$matches = mysqli_num_rows($result);
 	mysqli_free_result($result);
-	return($matches == 1);
+	return($matches != 0);
 }
 
