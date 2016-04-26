@@ -17,7 +17,7 @@ if ( ! isset( $_POST['email'] ) or
 // returns true if so, false otherwise.
 function checklogin($email, $password){
 	$encodepassword = sha1($password);
-	$query = "SELECT * FROM community WHERE email='$email' and password='$encodepassword'";
+	$query = "SELECT * FROM Member WHERE email='$email' and password='$encodepassword'";
 	$dbc = connect_to_db("kernanc");
 	$result = perform_query($dbc, $query);
 	$matches = mysqli_num_rows($result);
