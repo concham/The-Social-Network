@@ -15,10 +15,10 @@ if ( ! isset( $_POST['email'] ) or
 // checklogin sees if an entry exists with the name password pair passed.
 // returns true if so, false otherwise.
 function checklogin($email, $password){
-	$dbc = connect_to_db("kernanc");
 	$encodepassword = sha1($password);
-	$result = perform_query($dbc, 
-		"select * FROM community where email='$email' and password='$encodepassword'");
+	$query = "SELECT * FROM community WHERE email='$email' and password='$encodepassword'";
+	$dbc = connect_to_db("kernanc");
+	$result = perform_query($dbc, $query);
 	$matches = mysqli_num_rows($result);
 	mysqli_free_result($result);
 	disconnect_from_db($dbc);
