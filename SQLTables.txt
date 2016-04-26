@@ -3,7 +3,6 @@ DROP TABLE IF EXISTS Student;
 DROP TABLE IF EXISTS Staff;
 DROP TABLE IF EXISTS History;
 
-
 Morrissey College of Arts & Sciences,
 Law School,
 Woods College of Advancing Studies,
@@ -13,51 +12,70 @@ Connell School of Nursing,
 Lynch School of Education,
 School of Theology & Ministry
 
+Insert into Member (Position) values ('Student');
+
 CREATE TABLE Member
 (
 Position varchar(10),
-ID int,
+ID int NOT NULL AUTO_INCREMENT,
 PRIMARY KEY(ID)
 );
 
+Insert into Student (ID, FirstName, LastName, Email, Password, School) values ((select if (max(t.ID)>max(f.ID), max(t.ID)+1, max(f.ID)+1) from Student t, Staff f), 'Sharon', 'Butler', 'sbutler0@utexas.edu', 'AABBCC', 'Morrissey College of Arts & Sciences');
+
+If (((select max(t.ID)<max(m.ID) AND max(f.ID)<max(m.ID) from Student t, Staff f, Member m))) then
+Insert into Student (ID, FirstName, LastName, Email, Password, School) values ((select if (max(t.ID)>max(f.ID), max(t.ID)+1, max(f.ID)+1) from Student t, Staff f), 'Sharon', 'Butler', 'sbutler0@utexas.edu', 'AABBCC', 'Morrissey College of Arts & Sciences');
+
+Insert into Student (ID, FirstName, LastName, Email, Password, School) values ((select if (max(t.ID)>max(f.ID), max(t.ID)+1, max(f.ID)+1) from Student t, Staff f), 'Sharon', 'Butler', 'sbutler0@utexas.edu', 'AABBCC', 'Morrissey College of Arts & Sciences')
+where (((select max(t.ID)<max(m.ID) AND max(f.ID)<max(m.ID) from Student t, Staff f, Member m)));
+
+Insert into Student (ID, FirstName, LastName, Email, Password, School) values ((select if (max(t.ID)>max(f.ID), max(t.ID)+1, max(f.ID)+1) from Student t, Staff f), 'Sharon', 'Butler', 'sbutler0@utexas.edu', 'AABBCC', 'Morrissey College of Arts & Sciences');
+
+If (((select max(ID) from Member)>(select max(ID) from Student)) AND ((select max(ID) from Member)>(select max(ID) from Staff))) then
+Insert into Student (ID, FirstName, LastName, Email, Password, School) values ((select if (max(t.ID)>max(f.ID), max(t.ID)+1, max(f.ID)+1) from Student t, Staff f), 'Sharon', 'Butler', 'sbutler0@utexas.edu', 'AABBCC', 'Morrissey College of Arts & Sciences');
+else;
+End if;
+
+insert 
+  when (((select max(ID) from Member)>(select max(ID) from Student)) AND ((select max(ID) from Member)>(select max(ID) from Staff)))
+      then into Student (ID, FirstName, LastName, Email, Password, School) values ((select if (max(t.ID)>max(f.ID), max(t.ID)+1, max(f.ID)+1) from Student t, Staff f), 'Sharon', 'Butler', 'sbutler0@utexas.edu', 'AABBCC', 'Morrissey College of Arts & Sciences')
+  select 'true' as condition from dual where not exists ( Insert your select here to check existence/not existence)
 
 CREATE TABLE Student
 (
-ID int,
+ID int NOT NULL AUTO_INCREMENT,
 FirstName varchar(20),
 LastName varchar(20),
-School varchar(100),
-GradYear int,
 Email varchar(30),
-Gender varchar(10),
-BirthDate Date,
 Password varchar(30),
+School varchar(100),
 FOREIGN KEY (ID) references Member(ID)
 );
 
+Insert into Staff (ID, FirstName, LastName, Email, Password, School) values ((select if (max(t.ID)>max(f.ID), max(t.ID)+1, max(f.ID)+1) from Student t, Staff f), 'Deborah', 'Hart', 'dharta@netvibes.com', 'CCDDEE', 'School of Theology & Ministry');
 
 CREATE TABLE Staff
 (
-ID int,
+ID int NOT NULL AUTO_INCREMENT,
 FirstName varchar(20),
 LastName varchar(20),
-School varchar(100),
 Email varchar(30),
-Gender varchar(10),
-BirthDate Date,
 Password varchar(30),
+School varchar(100),
 FOREIGN KEY (ID) references Member(ID)
 );
 
+insert into History (Topic, CommentDate, Comment, RecordNumber) values ('A', '01/01/2016', 'AABBCCDDEEFFGG', '1000');
 
-CREATE TABLE History
-(
-ID int,
-Topic varchar(50),
-CommentDate Date,
-Comment varchar(8000),
-RecordNumber int,
-FOREIGN KEY (ID) references Member(ID)
-);
+	CREATE TABLE History
+	(
+	ID int,
+	Topic varchar(50),
+	CommentDate Date,
+	Comment varchar(8000),
+	RecordNumber int NOT NULL,
+	FOREIGN KEY (ID) references Member(ID),
+	PRIMARY KEY(RecordNumber)
+	);
 
 
