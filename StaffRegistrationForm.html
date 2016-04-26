@@ -2,7 +2,7 @@
 <html lang="en" xml:lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>HW Form</title>
+	<title>Staff Registration</title>
 
 <style>
 body {
@@ -81,12 +81,12 @@ button{
 		<br>
 		
 		<label for="password">Password: </label>
-		<input type="text" name="password" id="password" size="30" hspace="5" class="input1"/>
+		<input type="password" name="password" id="password" size="30" hspace="5" class="input1"/>
 		<br>
 		<p id="passworderror"></p>
 		<br>
 		<label for="confirmation">Confirm Password: </label>
-		<input type="text" name="confirmation" id="confirmation" size="30" hspace="5" class="input1"/>				
+		<input type="password" name="confirmation" id="confirmation" size="30" hspace="5" class="input1"/>				
 		<br>
 		<br><br>
 		<label>Select the name of your school: </label>
@@ -101,11 +101,11 @@ button{
 		<br><br>
 		<input type="radio" name="school" value="CSOM"> Carroll School of Management
 		<br><br>
-		<input type="radio" name="school" value="CSON"> Connell School of Nursing
+		<input type="radio" name="school" value="Nursing"> Connell School of Nursing
 		<br><br>
 		<input type="radio" name="school" value="Lynch"> Lynch School of Education
 		<br><br>
-		<input type="radio" name="school" value="Theo"> School of Theology & Ministry
+		<input type="radio" name="school" value="Theology"> School of Theology & Ministry
 		<br><br>
 		<button id="registerbutton"> Join Now!</button> 
 	</form>
@@ -129,7 +129,7 @@ button{
                     	email: $("#email").val(),
                     	password: $("#password").val(),
                     	confirmation: $("#confirmation").val(),
-                    	school: $("#school").val()
+                    	school: $("input[name='school']:checked").val()
                     },
                     function(data,status) {      		
                 		$("#results").html("data" + data + " status", status);
@@ -143,11 +143,8 @@ button{
 
 <?php
 	function displayForm() {
-
 		 $name= isset($_GET["email"]) ? $_GET["email"] : "";
 		 $pass= isset($_GET["password"]) ? $_GET["password"] : "";
 		 $school = isset($_GET[""]) ? $_GET["email"] : "";
 	}
-
 ?>
-

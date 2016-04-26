@@ -63,6 +63,7 @@ legend {
   
   ?>
   <h1>Boston College Social Network</h1>
+  <a href="LogoutCookie.php">Logout</a>
   <img src= 'img/bcseal.jpg' alt='Boston College Seal' id= "bcseal" >
   <fieldset class="fieldset1">
   <legend> Campus News </legend>
