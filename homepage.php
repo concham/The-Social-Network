@@ -94,9 +94,8 @@ function handle_form( $myfeed ) {
       if (!$items)
         $items = $rss->item; # works other versions
       foreach ( $items as $item ) {
-      	echo "<div class='news'>
-      			<h2>$item->title<h2>\n";
-        echo '<a href="' . $item->link . '"></a><br>';
+      	echo "<div class='news'>";
+        echo '<a href="' . $item->link . '">' . $item->title . '</a><br>';
         echo $item->description . "<br><br>\n";
         echo "</div>";
       }
