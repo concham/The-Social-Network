@@ -5,7 +5,7 @@ Insert into Member (membertype, firstname, lastname, email, password, school) va
 http://cscilab.bc.edu/~kernanc/project/TheSocialNetwork/RegistrationForm.html
 
 2.	Delete a member account
-Actor – Member
+Actor – Administrator
 Precondition: Member must already exist in the Database
 Delete from Member where ID=1;
 
@@ -15,7 +15,7 @@ Precondition: You need to already be a member to post a comment
 Insert into Comment (ID, comment, commentdate, recordnumber) values ('1', 'AABBCCDDEEFF', '02/02/2016', '1');
 
 4.	Delete a Comment
-Actor – Member
+Actor – Administrator
 Precondition: You need to already be a member to delete a comment
 Delete from comment where recordnumber=1;
 
@@ -38,7 +38,7 @@ Precondition – You need to already be a member
 Select * from comment where ID=1;
 
 8.	Delete all comment records from a particular member
-Actor – Member
+Actor – Administrator
 Precondition: You need to already be a member to delete comments
 Delete from comment where ID=1;
 
