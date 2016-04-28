@@ -17,7 +17,7 @@
 		
 		<br>
 		<br>
-		<label> Your Message</label>
+		<label> Your Message:</label><br>
 		<textarea rows= "10" cols= "100" id="message" name= "Additional Information"></textarea>
 		<p id="messageerror"></p>
 		
