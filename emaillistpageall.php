@@ -11,18 +11,18 @@
 	<form method = "post">
 	<fieldset>
 		<legend>Create School Mail</legend>
-		<label> Subject</label>
-		<input type="text" id="subject"><br>
+		<label> Subject:</label> <br>
+		<textarea rows= "2" cols= "60" id="subject" placeholder="Subject of your Email"></textarea>
 		<p id="subjecterror"></p>
 		
 		<br>
 		<br>
-		<label> Your Message:</label><br>
-		<textarea rows= "10" cols= "100" id="message" name= "Additional Information"></textarea>
+		<label> Your Message:</label> <br>
+		<textarea rows= "10" cols= "100" id="message" name= "Additional Information"  placeholder="Write the Message of your Email Here!"></textarea>
 		<p id="messageerror"></p>
 		
 	<br>
-		<p> Choose Schools </p>
+		<p> Choose Your School: </p>
 		
 		<input type="checkbox" name="school" value="A&S"> Morrissey College of Arts & Sciences <br>
 		<input type="checkbox" name="school" value="Law"> Law School <br>
@@ -37,12 +37,15 @@
 		 
 		<br>
 		
-	<p> Mailing Password </p>
+	<label> Email Password: </label>
 	<input type= "text" id="mailingpassword">
-		<input type="button" onclick="return validation();" id="myBtn" value="Send Mail"> </input>
+	<br><br>
+		<input type="button" onclick="return validation();" id="myBtn" value="Send Email!"> </input>
+		
+		
 		<?php
 function sendemailtoclass(){
-include(dbconn.php)
+include(dbconn.php);
 $school = array(); //sets the schools as an array
 $school[] = (isset($_GET['a&s']) && $_GET['a&s'] == 1) ? 'school_name = Morrissey College of Arts & Sciences ' : '';
 $school[] = (isset($_GET['law']) && $_GET['law'] == 1) ? 'school_name = Law School' : '';
@@ -58,14 +61,19 @@ if (!empty($temparray)) {
 } else {
    $selection = ''; 
 }
+
 $sql = "SELECT email FROM community $selection"; // selects from the database based on which criteria is set - some, all or none
-	$to= $sql
+	
+	
+	$to= 
 	$subject= isset($_GET["subject"]) ? $_GET["subject"] : "";
 	$body=isset($_GET["message"]) ? $_GET["message"] : "";
 	$headers = 'From: The-Social-Network@bc.edu';
 	mail( $to, $subject, $body, $headers );
 	}
 ?>
+
+
 	</fieldset>
 	
 	</body>
