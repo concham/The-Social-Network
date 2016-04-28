@@ -39,12 +39,10 @@ legend {
 fieldset {
 	border: 3px solid #ff9977;	
 	}
-
 button{
 	background-color: white;
 	border: 2px color: black;
 	font-size: 15px;
-
 }
 	
 	</style>
@@ -66,9 +64,10 @@ button{
 		<br><br>
 		<button id="GRButton"> Submit</button> 
 		
+		
 		<?php 
 function createnewpassword(){
-	include('dbconn.php')
+	include('dbconn.php');
 	   if($_SERVER["REQUEST_METHOD"] == "POST") {
       
       $email = isset($_GET["email"]) ? $_GET["email"] : "";
@@ -112,6 +111,8 @@ function createnewpassword(){
     	return $newpassword;
 	}
 ?>
+
+
 	</fieldset> 
 	 </body>
 </html>
