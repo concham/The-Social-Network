@@ -22,7 +22,6 @@
 		<p id="messageerror"></p>
 		
 	<br>
-	<br>
 		<p> Choose Schools </p>
 		
 		<input type="checkbox" name="school" value="A&S"> Morrissey College of Arts & Sciences <br>
