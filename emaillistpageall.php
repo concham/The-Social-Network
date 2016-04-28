@@ -18,7 +18,7 @@
 		<br>
 		<br>
 		<label> Your Message</label>
-		<input type="textarea" id="message"><br>
+		<input type="textarea" id="message" cols="20" rows="5"><br>
 		<p id="messageerror"></p>
 		
 	<br>
