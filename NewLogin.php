@@ -29,7 +29,7 @@ function displayLoginForm($email, $password)
 		<input type="submit" name="Login" value="Login" />
 		
 	<p>Don't have an account? <a href="http://cscilab.bc.edu/~kernanc/project/TheSocialNetwork/RegistrationForm.html"> Register Here! </a> </p>
-	<p>Forgot Your Password? <a href="http://cscilab.bc.edu/~kernanc/project/ProjectPasswordResetall.php"> Click Here! </a> </p>
+	<p>Forgot Your Password? <a href="http://cscilab.bc.edu/~kernanc/project/TheSocialNetwork/ProjectPasswordResetall.php"> Click Here! </a> </p>
 	</form>
 	</fieldset>
 <?php }
