@@ -65,54 +65,51 @@ button{
 		<button id="GRButton"> Submit</button> 
 		
 		
-		<?php 
-function createnewpassword(){
-	include('dbconn.php');
-	   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      
-      $email = isset($_GET["email"]) ? $_GET["email"] : "";
-      
-	$sql= "SELECT ID FROM community WHERE $email = 'email'";
-	$count = mysqli_num_rows($sql);
-	
-//count the number of rows that results from the query, if there is one then set $to email variable to the email the user entered,
-//generate a random password, replace the original password with the new one
-	 if($count == 1) {
-         random_password();
-         $encryptpassword= sha1($newpassword);
-         $query = "UPDATE community SET password='$newpassword' WHERE email='$email'";
-	
-	$dbc = connect_to_db("kernanc");
-	if (true == perform_query( $dbc, $query ) ) {
-			$returnstatus = array( 'status'=> "success", 'data'=> "You have successfully changed your password");
-			sendpasswordinemail();
-			echo $returnstatus;
-	} else {
-			$returnstatus = array( 'status'=> "failure", 'data'=> "Error: " . $sql . "<br>" . mysqli_error($connect));
+<?php 
+include('dbconn.php');
+function create_new_password(){
+	if($_SERVER["REQUEST_METHOD"] == "POST") {
+     		$email = isset($_POST["email"]) ? $_POST["email"] : ""; //check if email is entered, get email
+      		$query = "SELECT * FROM Member WHERE email = '$email'"; //query to check database for email
+      		$dbc = connect_to_db("kernanc"); //connect to database
+			if (true == perform_query( $dbc, $query ) ) { //run the query
+				$count = mysqli_num_rows($query); //count the rows returned
+				if($count != 0) { //if count is not 0,
+         				random_password(); //run function random_password
+         				$encryptnewpassword = sha1($newpassword); //encrypt new password from function random_password()
+         				$query = "UPDATE Member SET password='$encryptnewpassword' WHERE email='$email'"; //query to replace password in database
+				 	$dbc = connect_to_db("kernanc"); //connect to database
+				 		if (true == perform_query( $dbc, $query ) ) { //run the query
+							$returnstatus = array( 'status'=> "success", 'data'=> "You have successfully changed your password");
+							echo $returnstatus;
+						} else {
+							$returnstatus = array( 'status'=> "failure", 'data'=> "Error: " . $sql . "<br>" . mysqli_error($connect));
+							echo $returnstatus;
+						}
+				 } else { //if count is 0, return error message
+				 	$error = "Your email is invalid";
+				 	echo $error;
+				 }
+			}
 	}
-      		}else {
-         	$error = "Your Login Name is invalid";
-         	echo error;
-		 }
-	   }
 }
-	// Actually email the new password
-	function sendpasswordinemail(){
-	$to= isset($_GET["email"]) ? $_GET["email"] : "";
-	$subject='forgot your password';
-	$body='Here is your password: $newpassword';
-	$headers = 'From: The-Social-Network@bc.edu';
-	mail( $to, $subject, $body, $headers );
-	}
-	// Generate a random password
-	function random_password( $length = 8 ) {
-	 $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
-	 $newpassword = substr( str_shuffle( $chars ), 0, $length );
-    	return $newpassword;
-	}
+
+// Generate a random password and email to user
+function random_password() {
+$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+$newpassword = array();
+$charsLength = strlen($chars) - 1;
+    for ($i = 0; $i < 8; $i++) {
+	$n = rand(0, $charsLength);
+	$newpassword[] = $chars[$n];
+    }
+$to = isset($_POST["email"]) ? $_POST["email"] : "";
+$subject = "Forgot Your Password";
+$body = "Here is your new password: $newpassword";
+$header = "From: The-Social-Network@bc.edu";
+	mail($to, $subject, $body, $headers);
+}
 ?>
-
-
 	</fieldset> 
-	 </body>
+	</body>
 </html>
