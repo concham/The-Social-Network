@@ -52,18 +52,16 @@ button{
 
 <hr class="style1"><hr class="style2">
 <br>
-
 	<fieldset>
-
+		<form id="ajaxRequestForm" method="post">
 		<legend> Did You Forget Your Password? </legend>
-
-<br>
+		<br>
 		<label for="email">BC E-Mail Address: </label>
-
 		<input type="text" name="email" id="username" size="30" />
 		<br><br>
-		<button id="GRButton"> Submit</button> 
-		
+		<button id="GRButton"> Submit</button>
+		</form>
+		</fieldset> 
 		
 <?php 
 include('dbconn.php');
@@ -110,6 +108,6 @@ $header = "From: The-Social-Network@bc.edu";
 	mail($to, $subject, $body, $headers);
 }
 ?>
-	</fieldset> 
+
 	</body>
 </html>
