@@ -24,14 +24,14 @@
 	<br>
 		<p> Choose Your School: </p>
 		
-		<input type="checkbox" name="school" value="A&S"> Morrissey College of Arts & Sciences <br>
-		<input type="checkbox" name="school" value="Law"> Law School <br>
-		<input type="checkbox" name="school" value="Woods"> Woods College of Advancing Studies <br>
-		<input type="checkbox" name="school" value="Social"> School of Social Work <br>
-		<input type="checkbox" name="school" value="CSOM"> Carroll School of Management <br>
-		<input type="checkbox" name="school" value="Nursing"> Connell School of Nursing <br>
-		<input type="checkbox" name="school" value="Lynch"> Lynch School of Education <br>
-		<input type="checkbox" name="school" value="Theology"> School of Theology & Ministry <br>
+		<input type="checkbox" name="school" value="Morrissey College of Arts & Sciences"> Morrissey College of Arts & Sciences <br>
+		<input type="checkbox" name="school" value="Law School"> Law School <br>
+		<input type="checkbox" name="school" value="Woods College of Advancing Studies"> Woods College of Advancing Studies <br>
+		<input type="checkbox" name="school" value="School of Social Work"> School of Social Work <br>
+		<input type="checkbox" name="school" value="Carroll School of Management"> Carroll School of Management <br>
+		<input type="checkbox" name="school" value="Connell School of Nursing"> Connell School of Nursing <br>
+		<input type="checkbox" name="school" value="Lynch School of Education"> Lynch School of Education <br>
+		<input type="checkbox" name="school" value="School of Theology & Ministry"> School of Theology & Ministry <br>
 		<p id="checkboxerror"> </p>
 		
 		 
