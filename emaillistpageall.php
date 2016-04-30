@@ -46,6 +46,7 @@
 		<?php
 function sendemailtoclass(){
 include(dbconn.php);
+connect_to_db();
 $school = array(); //sets the schools as an array
 $school[] = (isset($_GET['a&s']) && $_GET['a&s'] == 1) ? 'school_name = Morrissey College of Arts & Sciences ' : '';
 $school[] = (isset($_GET['law']) && $_GET['law'] == 1) ? 'school_name = Law School' : '';
@@ -57,15 +58,20 @@ $school[] = (isset($_GET['lynch']) && $_GET['lynch'] == 1) ? 'school_name = Lync
 $school[] = (isset($_GET['theology']) && $_GET['theology'] == 1) ? 'school_name = School of Theology & Ministry ' : '';
 $temparray = array_filter($school); //filters the array for empty values
 if (!empty($temparray)) {
-   $selection = 'WHERE '.join('AND ',$temparray);   // assigns a WHERE-clause with the non-empty values in the $temparray
+   $selection = 'WHERE '.join('OR',$temparray);   // assigns a WHERE-clause with the non-empty values in the $temparray
 } else {
    $selection = ''; 
 }
+$query = "SELECT email FROM community $selection"; // selects from the database based on which criteria is set - some, all or none
+echo "Query: $query (br />";
 
-$sql = "SELECT email FROM community $selection"; // selects from the database based on which criteria is set - some, all or none
-	
-	
-	$to= 
+$result =mysqli_query ($dbc, $query);
+while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+	{
+	$email = $row['email'];
+	}
+
+	$to= $email
 	$subject= isset($_GET["subject"]) ? $_GET["subject"] : "";
 	$body=isset($_GET["message"]) ? $_GET["message"] : "";
 	$headers = 'From: The-Social-Network@bc.edu';
