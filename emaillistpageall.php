@@ -45,7 +45,7 @@
 		
 		<?php
 function sendemailtoclass(){
-include(dbconn.php);
+include("dbconn.php");
 connect_to_db();
 $school = array(); //sets the schools as an array
 $school[] = (isset($_GET['a&s']) && $_GET['a&s'] == 1) ? 'school_name = Morrissey College of Arts & Sciences ' : '';
@@ -69,9 +69,10 @@ $result =mysqli_query ($dbc, $query);
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 	{
 	$email = $row['email'];
+	$emaillist+= "$email, ";
 	}
 
-	$to= $email
+	$to= $emaillist
 	$subject= isset($_GET["subject"]) ? $_GET["subject"] : "";
 	$body=isset($_GET["message"]) ? $_GET["message"] : "";
 	$headers = 'From: The-Social-Network@bc.edu';
