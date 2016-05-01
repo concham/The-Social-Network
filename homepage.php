@@ -80,7 +80,7 @@ legend {
   
   <fieldset>
   <legend>Boston College E-mail</legend>	
-  <a href="EmailList.html">Send an email</a>	
+  <a href="cscilab.bc.edu/~kernanc/project/TheSocialNetwork/EmailList.html">Send an email</a>	
   </fieldset>
   
 </body>
