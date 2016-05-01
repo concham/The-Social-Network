@@ -8,7 +8,7 @@ $query = "SELECT * FROM Member WHERE email = '$email'"; //query to check databas
       	
 $dbc = connect_to_db("kernanc"); //connect to database
 if (true == perform_query( $dbc, $query ) ) { //run the query
-	$result = mysqli_query($dbc, $query));
+	$result = mysqli_query($dbc, $query);
   	$count=mysqli_num_rows($result); //count the rows returned
 		if($count != 0) { //if count is not 0,
          		random_password(); //run function random_password
