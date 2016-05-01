@@ -26,6 +26,7 @@ if (true == perform_query( $dbc, $query ) ) {
 	$result = mysqli_query($dbc, $query);
 	while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 		$email = $row['email'];
+		$emaillist = "";
 		$emaillist += "$email, ";
 	}
 }
