@@ -77,7 +77,13 @@ legend {
   
   ?>
   </fieldset>
-  </body>
+  
+  <fieldset>
+  <legend>Boston College E-mail</legend>	
+  <a href="EmailList.html">Send an email</a>	
+  </fieldset>
+  
+</body>
 </html>
 <?php
 function handle_form( $myfeed ) {
