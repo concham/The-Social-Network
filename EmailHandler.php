@@ -3,7 +3,7 @@
 include("dbconn.php");
 
 $school = array(); //sets the schools as an array
-$school[] = (isset($_POST['a&s']) && $_POST['as'] == 1) ? 'school_name = Morrissey College of Arts & Sciences ' : '';
+$school[] = (isset($_POST['as']) && $_POST['as'] == 1) ? 'school_name = Morrissey College of Arts & Sciences ' : '';
 $school[] = (isset($_POST['law']) && $_POST['law'] == 1) ? 'school_name = Law School' : '';
 $school[] = (isset($_POST['woods']) && $_POST['woods'] == 1) ? 'school_name = Woods College of Advancing Studies ' : '';
 $school[] = (isset($_POST['social']) && $_POST['social'] == 1) ? 'school_name = School of Social Work ' : '';
