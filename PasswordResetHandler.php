@@ -38,10 +38,8 @@ function random_password() {
 	$dbc = connect_to_db("kernanc"); //connect to database
 		if (true == perform_query( $dbc, $query ) ) { //run the query
 			$returnstatus = array( 'status'=> "success", 'data'=> "You have successfully changed your password");
-			echo $returnstatus;
 		} else {
 			$returnstatus = array( 'status'=> "failure", 'data'=> "Error: " . $sql . "<br>" . mysqli_error($connect));
-			echo $returnstatus;
 		}
 }
 
