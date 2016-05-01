@@ -14,7 +14,7 @@ $school[] = (isset($_POST['theology']) && $_POST['theology'] == 1) ? 'school_nam
 
 $temparray = array_filter($school); //filters the array for empty values
 if (!empty($temparray)) {
-   $selection = 'WHERE '.join('OR',$temparray);   // assigns a WHERE-clause with the non-empty values in the $temparray
+   $selection = "WHERE school='.join('OR',$temparray)";   // assigns a WHERE-clause with the non-empty values in the $temparray
 } else {
    $selection = ''; 
 }
