@@ -21,18 +21,17 @@ if (true == perform_query( $dbc, $query ) ) { //run the query
 // Generate a random password
 function random_password() {
 	$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-	$newpassword = array();
 	$charsLength = strlen($chars) - 1;
     	for ($i = 0; $i < 8; $i++) {
 		$n = rand(0, $charsLength);
-		$newpassword[] = $chars[$n];
+		$newpassword = $chars[$n];
 	}
 //email new password to user
-	$to = isset($_POST["email"]) ? $_POST["email"] : "";
+	$email = isset($_POST["email"]) ? $_POST["email"] : "";
 	$subject = "Forgot Your Password";
 	$body = "Here is your new password: $newpassword";
 	$header = "From: The-Social-Network@bc.edu";
-		mail($to, $subject, $body, $header);
+		mail($email, $subject, $body, $header);
 //encrypt new password and update database		
 	$encryptnewpassword = sha1($newpassword); //encrypt new password
         $query = "UPDATE Member SET password='$encryptnewpassword' WHERE email='$email'"; //query to replace password in database
