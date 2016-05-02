@@ -3,9 +3,9 @@
 include("dbconn.php");
 
 $query = "SELECT email FROM Member WHERE";
-if(!empty($_POST['school[]'])) {
-	foreach($_POST['school[]'] as $schools) {
-		$splitarray = join("OR", $schools);
+if(!empty($_POST['school'])) {
+	foreach($_POST['school'] as $selected) {
+		$splitarray = join("OR", $selected);
 		$query += "school='$splitarray'";
 
 		$dbc = connect_to_db("kernanc");
