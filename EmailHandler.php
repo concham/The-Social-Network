@@ -25,9 +25,6 @@ if(!empty($_POST['school[]'])) {
 	}
 }
 
-
-	
-	
 ?>
 	
 /* $school = array(); //sets the schools as an array
@@ -47,6 +44,4 @@ if (!empty($temparray)) {
    $selection = ''; 
 }
 
-$query = "SELECT email FROM Member $selection"; // selects from the database based on which criteria is set - some, all or none
-
-?> */
+$query = "SELECT email FROM Member $selection"; // selects from the database based on which criteria is set - some, all or none */
