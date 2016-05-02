@@ -3,8 +3,8 @@
 include("dbconn.php");
 
 $query = "SELECT email FROM Member WHERE";
-if(!empty($_POST['school'])) {
-	foreach($_POST['school'] as $schools){
+if(!empty($_POST['school[]'])) {
+	foreach($_POST['school[]'] as $schools) {
 		$splitarray = join("OR", $schools);
 		$query += "school='$splitarray'";
 
