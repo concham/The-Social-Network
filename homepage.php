@@ -78,9 +78,19 @@ legend {
   ?>
   </fieldset>
   
+  <br><br>
+  <br><br>
+  
   <fieldset>
   <legend>Boston College E-mail</legend>	
   <a href="EmailList.html">Send an email</a>	
+  </fieldset>
+  
+  <br><br>
+  <br><br>
+  
+  <fieldset>
+  <legend>Comments</legend>	
   </fieldset>
   
 </body>
