@@ -90,8 +90,32 @@ legend {
   <br><br>
   
   <fieldset>
-  <legend>Comments</legend>	
+  <legend>Community Comments</legend>
+  	<form id="ajaxRequestForm" method="post">
+  		<textarea rows="2" cols="60" id="comment" placeholder="Enter your comment here"></textarea>
+  		<button id="commentbutton">Post</button>
+  	</form>
   </fieldset>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#commentbutton").click(function( event ){
+				event.preventDefault();
+		
+                var request = $.post("CommentHandler.php",
+                    { 
+                    	commnet: $("#comment").val()
+                    },
+                    function(data,status) {      		
+                		$("#results").html("data" + data + " status", status);
+                	}
+                );
+                
+                
+            });
+		});
+	</script>
   
 </body>
 </html>
