@@ -93,7 +93,7 @@ legend {
   <legend>Community Comments</legend>
   	<form id="ajaxRequestForm" method="post">
   		<p>Your Comment</p>
-  		<textarea rows="2" cols="60" id="comment" placeholder="Enter your comment here"></textarea>
+  		<textarea rows="5" cols="100" id="comment" placeholder="Enter your comment here"></textarea>
   		<br><br>
   		<p>Today's Date: mm/dd/yyyy</p>
   		<input type="text" name="date" id="date" placeholder="Today's date" />
