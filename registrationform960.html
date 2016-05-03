@@ -185,7 +185,7 @@ function validatePassword(){
 			
 function validateConfirmation(){
 	var confirmation = document.getElementById("confirmation").value;
-		if (confirmation == "") || (confirmation !== password)  {
+		if ((confirmation == "") || (confirmation !== password))  {
 			var errorconfirmation = document.getElementById("confirmationerror");
 			errorconfirmation.innerHTML = "Invalid password confirmation";
 			return false;
