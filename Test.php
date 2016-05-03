@@ -7,6 +7,7 @@
 
 
 
+
 <?php
 	
 
@@ -36,7 +37,7 @@
 
 </body>
 </html>
-<?
+<?php
 function createDataTable($start, $itemsPerPage, $links){
 	$qry = "SELECT firstname, lastname, school, email FROM Member
 				ORDER BY {$links['orderby']}
@@ -51,8 +52,8 @@ function createDataTable($start, $itemsPerPage, $links){
 				</tr>\n";
 				
 				
-	$dbc = connectToDB("kernanc");
-	$result = performQuery($dbc, $qry);
+	$dbc = connect_to_db("kernanc");
+	$result = perform_query($dbc, $qry);
 	$class = "alt2";
 	while (@extract(mysqli_fetch_array($result, MYSQLI_ASSOC))) {
 		$class = ($class=='alt1' ? 'alt2':'alt1');
@@ -72,10 +73,10 @@ function findpages($itemsPerPage){
 	} else {
 	
 		// starting new, so get it from the database
-		$qry="SELECT COUNT(firstname) as count from countries;";
+		$qry="SELECT COUNT(firstname) as count from Member;";
 		
-		$dbc = connectToDB("kernanc");
-		$result = performQuery($dbc, $qry);
+		$dbc = connect_to_db("kernanc");
+		$result = perform_query($dbc, $qry);
 		extract((array)mysqli_fetch_array($result, MYSQLI_ASSOC));
 			
 		if ($count > $itemsPerPage)
