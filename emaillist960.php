@@ -312,10 +312,7 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 <br>
 <br>
 
-
-	<form id="ajaxRequestForm" method="post">
-
-
+<form id="ajaxRequestForm" method="post">
 	<fieldset>
 		<legend>Create School Mail</legend>
 		<label> Subject:</label> <br>
@@ -331,14 +328,14 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 	<br>
 		<p> Choose Your School: </p>
 		
-		<input type="checkbox" name="school[]" id="as" value="Morrissey College of Arts & Sciences"> Morrissey College of Arts & Sciences <br>
-		<input type="checkbox" name="school[]" id="law" value="Law School"> Law School <br>
-		<input type="checkbox" name="school[]" id="woods" value="Woods College of Advancing Studies"> Woods College of Advancing Studies <br>
-		<input type="checkbox" name="school[]" id="social" value="School of Social Work"> School of Social Work <br>
-		<input type="checkbox" name="school[]" id="csom" value="Carroll School of Management"> Carroll School of Management <br>
-		<input type="checkbox" name="school[]" id="nursing" value="Connell School of Nursing"> Connell School of Nursing <br>
-		<input type="checkbox" name="school[]" id="lynch" value="Lynch School of Education"> Lynch School of Education <br>
-		<input type="checkbox" name="school[]" id="theology" value="School of Theology & Ministry"> School of Theology & Ministry <br>
+		<input type="checkbox" name="school" class="school" id="mcas" value="Morrissey College of Arts & Sciences"> Morrissey College of Arts & Sciences <br>
+		<input type="checkbox" name="school" class="school" id="law" value="Law School"> Law School <br>
+		<input type="checkbox" name="school" class="school" id="woods" value="Woods College of Advancing Studies"> Woods College of Advancing Studies <br>
+		<input type="checkbox" name="school" class="school" id="social" value="School of Social Work"> School of Social Work <br>
+		<input type="checkbox" name="school" class="school" id="csom" value="Carroll School of Management"> Carroll School of Management <br>
+		<input type="checkbox" name="school" class="school" id="nursing" value="Connell School of Nursing"> Connell School of Nursing <br>
+		<input type="checkbox" name="school" class="school" id="lynch" value="Lynch School of Education"> Lynch School of Education <br>
+		<input type="checkbox" name="school" class="school" id="theology" value="School of Theology & Ministry"> School of Theology & Ministry <br>
 		<p id="checkboxerror"> </p>
 	<br><br>
 		<button id="sendemail">Send</button>
@@ -351,13 +348,22 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 	$(document).ready(function(){
 		$("#sendemail").click(function( event ){
 			event.preventDefault();
-            	
+				
+				if ($('.school:checked').length) {
+          			var schools = '';
+          			$('.school:checked').each(function () {
+            			schools += "'" + $(this).val() + "',";
+          			});
+          				schools = schools.slice(0, -1);
+   				 }
+				
+				
                 //start ajax request
                 var request = $.post("EmailHandler.php",
                     { 
                     	subject: $("#subject").val(),
                     	message: $("#message").val(),
-                    	school: $("input[name='school[]']:checked").val()
+                    	schools: schools	
                     },
                     function(data,status) {      		
                 		$("#results").html("data" + data + " status", status);
