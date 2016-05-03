@@ -92,7 +92,11 @@ legend {
   <fieldset>
   <legend>Community Comments</legend>
   	<form id="ajaxRequestForm" method="post">
+  		<p>Your Comment</p>
   		<textarea rows="2" cols="60" id="comment" placeholder="Enter your comment here"></textarea>
+  		<br><br>
+  		<p>Today's Date: mm/dd/yyy</p>
+  		<input type="text" name="date" id="date" placeholder="Today's date" />
   		<button id="commentbutton">Post</button>
   	</form>
   </fieldset>
@@ -105,7 +109,8 @@ legend {
 		
                 var request = $.post("CommentHandler.php",
                     { 
-                    	commnet: $("#comment").val()
+                    	comment: $("#comment").val(),
+                    	date: $('#date').val()
                     },
                     function(data,status) {      		
                 		$("#results").html("data" + data + " status", status);
