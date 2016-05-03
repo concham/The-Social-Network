@@ -4,8 +4,99 @@
 	<meta charset="utf-8" />
 	<title>Email List</title>
 </head>
+
+<style>
+body {
+	background-color: #ffddcc;
+	color: #ff7755; 
+	}
+h1 {
+	color: #ff7755;
+	text-align: center;
+	}
+.style1 {
+	width: 50%;
+	border-color: #ff7755;
+	background-color: #ff7755;
+	height: 1px;
+}
+.style2 {
+	width: 90%;
+	border-color: #ff7755;
+	background-color: #ff7755;
+	height: 1px;
+}
+form {
+	background-color: #ffddcc;
+}
+label {
+	color: #ff7755; 
+	font-size: 115%;
+}
+legend {
+	color: #ff7755; 
+	font-size: 140%;
+}
+.fieldset1 {
+	border: 3px solid #ff9977;
+	height: 300px;
+	width: 1175px;
+}
+.fieldset2 {
+	border: 3px solid #ff9977;
+
+	width: 1175px;
+}
+.button1 {
+	background-color: white;
+	border: 2px color: black;
+	font-size: 14px;
+	margin-left: 7px;
+}
+.style3 {
+	display: none;
+}
+table{
+	border-collapse: collapse;
+}
+table, th, td {
+	border: 1px solid black;
+	width: 100%;
+}
+th{
+	height: 10px;
+	text-align: center;
+}
+th, td{
+	resize: both;
+	width: 200px;
+	}
+tr:nth-child(even){background-color: #ffcc99;}
+tr:nth-child(odd){background-color: #ff9977;}
+tr:hover{background-color: #ff7755;}
+
+	
+	</style>
+
+</head>
+
+<h1> The Social Network - Email List Page</h1>
+
+<hr class="style1"><hr class="style2">
+<br>
+		<fieldset class="fieldset1">	
+			<legend> Club Members</legend>
+<br>
+		<form method="post">
+</form>
+
+ <table border=\"1\" style=\"width:100%\">
+<tr><th>First Name</th><th>Last Name</th><th>School</th><th>Email</th><th>Registration Date</th></tr>
+
+</table>
+		</fieldset>	
+		<br>
 <body>
-<h1> Email List </h1>
 	<div id= "studenttabble">
 	<br>
 	<form method = "post">
