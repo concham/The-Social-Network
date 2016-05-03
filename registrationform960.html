@@ -122,15 +122,87 @@ button{
 	</fieldset> 
 	<div id="results"></div>
 	
+<script>
+$('#registerbutton').click(function(){
+    validateEmail();
+    validateFirstName();
+    validateLastName();
+    validatePassword();
+    validateConfirmation();
+});
+
+function validateEmail(){
+	var email = document.getElementById("email").value;
+		if (email == "") {
+			var erroremail = document.getElementById("emailerror");
+			erroremail.innerHTML = "Please enter an Email";
+			return false;
+		} else {
+			var erroremail = document.getElementById("emailerror");
+			erroremail.innerHTML = "";
+			return true;
+		}
+}
+
+function validateFirstName(){
+	var firstname = document.getElementById("FirstName").value;
+		if (firstname == "") {
+			var errorfirstname = document.getElementById("firstnameerror");
+			errorfirstname.innerHTML = "Please enter a first name";
+			return false;
+		} else {
+			var errorfirstname = document.getElementById("firstnameerror");
+			errorfirstname.innerHTML = "";
+			return true;
+		}
+}
+
+function validateLastName(){
+	var lastname = document.getElementById("LastName").value;
+		if (lastname == "") {
+			var errorlastname = document.getElementById("lastnameerror");
+			errorlastname.innerHTML = "Please enter a last name";
+			return false;
+		} else {
+			var errorlastname=document.getElementById("lastnameerror");
+			errorlastname.innerHTML = "";
+			return true;
+		}
+}
+
+function validatePassword(){
+	var password = document.getElementById("password").value;
+		if (password == "") {
+			var errorpassword=document.getElementById("passworderror");
+			errorpassword.innerHTML = "Please enter a password";
+			return false;
+		} else {
+			var errorpassword=document.getElementById("passworderror");
+			errorpassword.innerHTML = "";
+			return true;
+		}
+}
+			
+function validateConfirmation(){
+	var confirmation = document.getElementById("confirmation").value;
+		if (confirmation == "") || (confirmation !== password)  {
+			var errorconfirmation = document.getElementById("confirmationerror");
+			errorconfirmation.innerHTML = "Invalid password confirmation";
+			return false;
+		} else {
+			var errorconfirmation = document.getElementById("confirmationerror");
+			errorconfirmation.innerHTML = "";
+			return true;
+		}
+}
+</script>
+	
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#registerbutton").click(function( event ){
 				event.preventDefault();
-			
-				//get the form data and then serialize that
-            	//var dataString = $("#ajaxRequestForm").serialize();
             	
                 //start ajax request
                 var request = $.post("registrationhandler960.php",
@@ -155,18 +227,3 @@ button{
     </script>
 </body>
 </html>
-
-
-
-<!-- <script>
-$('#registerbutton').click(function(){
-    validateEmail();
-    validateFirstName();
-    validateLastName();
-    validatepassword();
-});	
-</script>
-<script type="text/javascript" src="validateemail.js"></script>
-<script type="text/javascript" src="validatefirstname.js"></script>
-<script type="text/javascript" src="validatelastname.js"></script>
-<script type="text/javascript" src="validatepassword.js"></script> -->
