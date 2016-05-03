@@ -18,3 +18,4 @@ function perform_query( $dbc, $query ){
 			die( "bad query".mysqli_error( $dbc ) );
 	return $result;
 }
+?>
