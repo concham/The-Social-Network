@@ -364,32 +364,7 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 	$(document).ready(function(){
 		$("#sendemail").click(function( event ){
 			event.preventDefault();
-		var subject = document.getElementById("subject").value;
-	var message = document.getElementById("message").value;
-	var errorsubject=document.getElementById("subjecterror");
-	var errormessage = document.getElementById("messageerror");
-	var errorcheckbox= document.getElementById("checkboxerror");
-		//checkbox validation
-    var checkboxs=document.getElementsByName("school");
-    var okay=false;
-    for(var i=0,l=checkboxs.length;i<l;i++)
-    {
-        if(checkboxs[i].checked)
-        {
-            okay=true;
-            break;
-        }
-    }
-	//subject validation
-	if(okay==false){
-    	errorcheckbox.innerHTML = "Please check a major"}
-	else if (subject==""){
-	errorsubject.innerHTML = "Please enter an Email";
-		}
-		else if(message=="") {
-		errormessage.innerHTML= "Please enter a message to send";
-		}
-	else {		
+			
 				if ($('.school:checked').length) {
           			var schools = '';
           			$('.school:checked').each(function () {
@@ -414,7 +389,7 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
                 
             	});
 	});
-	}
+	
 </script>
 
 	
