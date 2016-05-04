@@ -14,7 +14,7 @@
   ?>
   <h1>Latest News</h1>
   <a href="LogoutCookie.php">Logout</a>
-  <a href="homepage960.php">Return to Home</a>
+  <a href="homepage960.html">Return to Home</a>
   <img src= 'bcseal.jpg' alt='Boston College Seal' id= "bcseal" >
   <fieldset class="fieldset1">
   <legend> Campus News </legend>
