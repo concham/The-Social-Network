@@ -3,50 +3,39 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Email</title>
-<style>
-	body {
-		background-color: #ffddcc;
-		color: #ff7755;
-		}
-	h1 {
-		color: #ff7755;
-		text-align: center;
-		}
-	.style1 {
-		width: 50%;
-		border-color: #ff7755;
-		background-color: #ff7755;
-		height: 1px;
-	}
-	.style2 {
-		width: 90%;
-		border-color: #ff7755;
-		background-color: #ff7755;
-		height: 1px;
-	}
-	form {
-		background-color: #ffccbb;
-	}
-	label {
-		color: #ff7755; 
-		font-size: 115%;
-	}
-	legend {
-		color: #ff7755; 
-		font-size: 140%;
-	}
-	fieldset {
-		border: 3px solid #ff9977;	
-		}
-	button{
-		background-color: white;
-		border: 2px color: black;
-		font-size: 15px;
-	}
-</style>
+
+
+	<link rel ="stylesheet" href="css/bootW.css">
 </head>
 <body>
-<h1> Email List </h1>
+<body style="padding:20px;">
+<h1> Boston College Email List </h1>
+<br>
+
+<ul class="nav nav-tabs" style>
+<li><a href="http://cscilab.bc.edu/~concham/Project/homepage960.html" data-toggle="tab"><font color="F5DEB3">Home</font></a></li>
+<li><a href="http://cscilab.bc.edu/~concham/Project/news960.php?" data-toggle="tab"><font color="F5DEB3">Get BC News!</font></a></li>
+<li class="active"><a href="http://cscilab.bc.edu/~concham/Project/EmailList.php?" data-toggle="tab"><font color="F5DEB3">Send Email</font></a></li>
+<li><a href="http://cscilab.bc.edu/~concham/Project/messageboard960.html" data-toggle="tab"><font color="F5DEB3">Comment</font></a></li>
+<li class="disabled"><a href="http://cscilab.bc.edu/~concham/Project/newlogin960.php" data-toggle="tab"><font color="F5DEB3">Log In</font></a></li>
+<li class="disabled"><a href="http://cscilab.bc.edu/~concham/Project/registrationform960.html" data-toggle="tab"><font color="F5DEB3">Create Account</font></a></li>
+<li><a href="http://cscilab.bc.edu/~concham/Project/passwordreset960.html" data-toggle="tab"><font color="F5DEB3">Reset Password</font></a></li>
+
+</ul>
+<br>
+<form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" >
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      
+      
+      
+      
+      
+      
+<br><br>
 	<div id= "studenttabble">
 	<br>
 <?php
@@ -58,11 +47,11 @@
 
 <style>
 body {
-	background-color: #ffddcc;
+	background-color: #92000a;
 	color: #ff7755; 
 	}
 h1 {
-	color: #ff7755;
+	color: #DAA520;
 	text-align: center;
 	}
 .style1 {
@@ -78,14 +67,14 @@ h1 {
 	height: 1px;
 }
 form {
-	background-color: #ffddcc;
+	background-color: #92000a;
 }
 label {
-	color: #ff7755; 
+	color: #DAA520; 
 	font-size: 115%;
 }
 legend {
-	color: #ff7755; 
+	color: #DAA520; 
 	font-size: 140%;
 }
 .fieldset1 {
@@ -122,14 +111,15 @@ th, td{
 	resize: both;
 	width: 200px;
 	}
-tr:nth-child(even){background-color: #ffcc99;}
-tr:nth-child(odd){background-color: #ff9977;}
+tr:nth-child(even){background-color: #ffcc99; color: #cc0000;}
+tr:nth-child(odd){background-color: #ff9977; color: #F5DEB3;}
 tr:hover{background-color: #ff7755;}
 
 	
 	</style>
 
-
+	<fieldset>
+		<legend>Email Database</legend>
 <?php
 	
 	$itemsPerPage=10;
@@ -278,8 +268,12 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 	// creating page links
 	if ($pages > 1) {
 		echo '<nav>
-  		<ul class="pagination">';
+  		<ul class="pagination pagination-sm">';
 		
+
+
+
+
 		// print Previous if not on the first page
 		$currentPage=($start/$itemsPerPage) + 1;
 		if ($currentPage != 1){
@@ -291,17 +285,26 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 		}
 		
 		// print page numbers
+		
+		?>
+		<div class="btn-toolbar">
+  <div class="btn-group">
+		<?php
+		
+		
 		for ($i=1; $i <= $pages; $i++) {
 				if ($i != $currentPage) {
 					echo '<a href="'.$thispage.'?s='.(($itemsPerPage * ($i-1))) . 
 												'&amp;p=' . $pages . 
 												'&amp;sort=' . $sort .
-												'"> '. $i .'  </a>'."</li>\n";
+												'" class="btn btn-default btn-xs"> '. $i .'  </a>'."</li>\n";
 				}  else {
 				
 					echo "<class=\"active\"><span class=\"sr-only\">$i </span></a>";
 				}
 		}
+		?> </div>
+		<?php
 	
 		// print next if not on the last page
 		if ($currentPage != $pages){
@@ -314,7 +317,9 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 	}
 }
 ?>
-<br>
+	</form>
+	</fieldset>
+
 <br>
 
 
@@ -323,30 +328,30 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 
 	<fieldset>
 		<legend>Create School Mail</legend>
-		<label> Subject:</label> <br>
-		<textarea rows= "2" cols= "60" id="subject" placeholder="Subject of your Email"></textarea>
+		<label> <font color="F5DEB3">Subject:</font></label> <br>
+		<textarea style="background-color:#faedd6" rows= "2" cols= "60" id="subject" placeholder="Subject of your Email"></textarea>
 		<p id="subjecterror"></p>
 		
 		<br>
 		<br>
-		<label> Your Message:</label> <br>
-		<textarea rows= "10" cols= "100" id="message" name= "Additional Information"  placeholder="Write the Message of your Email Here!"></textarea>
+		<label> <font color="F5DEB3">Your Message:</font></label> <br>
+		<textarea style="background-color:#faedd6" rows= "10" cols= "100" id="message" name= "Additional Information"  placeholder="Write the Message of your Email Here!"></textarea>
 		<p id="messageerror"></p>
 		
 	<br>
-		<p> Choose Your School: </p>
+		<p> <font color="F5DEB3">Choose Your School:</font> </p>
 		
-		<input type="checkbox" name="school[]" id="as" value="Morrissey College of Arts & Sciences"> Morrissey College of Arts & Sciences <br>
-		<input type="checkbox" name="school[]" id="law" value="Law School"> Law School <br>
-		<input type="checkbox" name="school[]" id="woods" value="Woods College of Advancing Studies"> Woods College of Advancing Studies <br>
-		<input type="checkbox" name="school[]" id="social" value="School of Social Work"> School of Social Work <br>
-		<input type="checkbox" name="school[]" id="csom" value="Carroll School of Management"> Carroll School of Management <br>
-		<input type="checkbox" name="school[]" id="nursing" value="Connell School of Nursing"> Connell School of Nursing <br>
-		<input type="checkbox" name="school[]" id="lynch" value="Lynch School of Education"> Lynch School of Education <br>
-		<input type="checkbox" name="school[]" id="theology" value="School of Theology & Ministry"> School of Theology & Ministry <br>
+		<input type="checkbox" name="school[]" id="as" value="Morrissey College of Arts & Sciences"><font color="F5DEB3"> Morrissey College of Arts & Sciences</font> <br>
+		<input type="checkbox" name="school[]" id="law" value="Law School"> <font color="F5DEB3">Law School </font><br>
+		<input type="checkbox" name="school[]" id="woods" value="Woods College of Advancing Studies"><font color="F5DEB3"> Woods College of Advancing Studies </font><br>
+		<input type="checkbox" name="school[]" id="social" value="School of Social Work"><font color="F5DEB3"> School of Social Work </font><br>
+		<input type="checkbox" name="school[]" id="csom" value="Carroll School of Management"> <font color="F5DEB3">Carroll School of Management</font> <br>
+		<input type="checkbox" name="school[]" id="nursing" value="Connell School of Nursing"><font color="F5DEB3"> Connell School of Nursing </font><br>
+		<input type="checkbox" name="school[]" id="lynch" value="Lynch School of Education"><font color="F5DEB3"> Lynch School of Education </font><br>
+		<input type="checkbox" name="school[]" id="theology" value="School of Theology & Ministry"> <font color="F5DEB3">School of Theology & Ministry </font><br>
 		<p id="checkboxerror"> </p>
-	<br><br>
-		<button id="sendemail">Send</button>
+	<br>
+		<button id="sendemail" class="btn btn-danger">Send</button>
 	</form>
 	</fieldset>
 	<div id="results"></div>
