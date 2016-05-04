@@ -2,6 +2,9 @@
 <html>
 	<head>
 	<title> Message Board </title>
+	  <a href="LogoutCookie.php">Logout</a>
+  	<br><br>
+	 <a href="homepage960.html">Return to Home</a>
 	</head>
 	<body>
 	<h1> Message Board </h1>
