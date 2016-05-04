@@ -364,7 +364,11 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 	$(document).ready(function(){
 		$("#sendemail").click(function( event ){
 			event.preventDefault();
-			
+			var subject = document.getElementById("subject").value;
+			if (subject==""){
+				errorsubject.innerHTML = "Please enter an Email";
+				}
+		else if{
 				if ($('.school:checked').length) {
           			var schools = '';
           			$('.school:checked').each(function () {
@@ -387,7 +391,7 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
                 );
                 
                 
-            	});
+            	}});
 	});
 	
 </script>
