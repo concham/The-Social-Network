@@ -68,7 +68,9 @@ button{
 		<input type="radio" name="membertype" value="Student"> Student
 		<br><br>
 		<input type="radio" name="membertype" value="Staff"> Staff
-		<br><br>
+		<br>
+		<p id="membertypeerror"></p>
+		<br>
 		
 		<label for="firstname">First Name: </label>
 		<input type="text" name="firstname" id="firstname" size="30" hspace="5" class="input1"/>
@@ -94,7 +96,9 @@ button{
 		<p id="passworderror"></p>
 		<br>
 		<label for="confirmation">Confirm Password: </label>
-		<input type="password" name="confirmation" id="confirmation" size="30" hspace="5" class="input1"/>				
+		<input type="password" name="confirmation" id="confirmation" size="30" hspace="5" class="input1"/>
+		<p id="confirmationerror"></p>
+		<p id="confirmationerror2"></p>
 		<br>
 		<br><br>
 		<label>Select the name of your school: </label>
@@ -116,7 +120,9 @@ button{
 		<input type="radio" name="school" value="School of Theology & Ministry"> School of Theology & Ministry
 		<br><br>
 		<button id="registerbutton"> Join Now!</button>
-		<br><br>
+		<br>
+		<p id="schoolerror"></p>
+		<br>
 		<a href="http://cscilab.bc.edu/~barthch/csciproject960/newlogin960.php">Return to Login</a>
 	</form>
 	</fieldset> 
@@ -127,7 +133,45 @@ button{
 		$(document).ready(function(){
 			$("#registerbutton").click(function( event ){
 				event.preventDefault();
-            	
+            		var firstname = document.getElementById("firstname").value;
+			var lastname = document.getElementById("lastname").value;
+			var email = document.getElementById("email").value;
+			var password = document.getElementById("password").value;
+			var confirmation = document.getElementById("confirmation").value;
+			var firstnameerror=document.getElementById("firstnameerror");
+			var lastnameerror = document.getElementById("lastnameerror");
+			var emailerror= document.getElementById("emailerror");
+			var passworderror= document.getElementById("passworderror");
+			var confirmationerror= document.getElementById("confirmationerror");
+			var confirmationerror2= document.getElementById("confirmationerror2");
+			var membertypeerror= document.getElementById("membertypeerror")
+			var schoolerror= document.getElementById("schoolerror")
+			
+			  	var radiobuttonsmembertype=document.getElementsByName("membertype");
+    				var okay1=false;
+    				for(var i=0,l=radiobuttonsmembertype.length;i<l;i++)
+    				{
+        			if(radiobuttonsmembertype[i].checked)
+        			{
+            				okay1=true;
+            				break;
+        					}
+    						}
+    				var radiobuttonsschool=document.getElementsByName("school");
+    				var okay2=false;
+    				for(var i=0,l=checkboxs.length;i<l;i++)
+    				{
+        			if(radiobuttonsschool[i].checked)
+        			{
+        			 okay2=true;
+        			 break;
+        			}
+    				}
+    			if (okay1==false){
+    			    	.innerHTML = "Please check a major"
+    			    	
+    			else if (okay2==false){
+    			
                 //start ajax request
                 var request = $.post("registrationhandler960.php",
                     { 
