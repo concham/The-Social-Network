@@ -10,6 +10,9 @@
 <body>
 <body style="padding:20px;">
 <h1> Boston College Email List </h1>
+  <a href="LogoutCookie.php">Logout</a>
+  <br><br>
+  <a href="homepage960.html">Return to Home</a>
 <br>
 
 <ul class="nav nav-tabs" style>
