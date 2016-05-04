@@ -168,9 +168,30 @@ button{
         			}
     				}
     			if (okay1==false){
-    			    	.innerHTML = "Please check a major"
-    			    	
+    			    	membertypeerror.innerHTML = "Please check your member type.";
+    			}
     			else if (okay2==false){
+    				schoolerror.innerHTML = "Please check your school.";
+    			}
+    			else if (firstname=="") {
+    				firstnameerror.innerHTML = "Please enter your first name.";
+			}
+			else if (lastname=="") {
+    				lastnameerror.innerHTML = "Please enter your last name.";
+			}
+			else if (email=="") {
+    				emailerror.innerHTML = "Please enter your email.";
+			}
+			else if (password=="") {
+    				passworderror.innerHTML = "Please enter a subject.";
+			}
+			else if (confirmation=="") {
+    				confirmationerror.innerHTML = "Please enter a subject.";
+			}
+			else if (confirmation!=password) {
+				confirmationerror2.innerHTML = "Password must be the same as confirmation."
+			}
+			else{
     			
                 //start ajax request
                 var request = $.post("registrationhandler960.php",
@@ -189,7 +210,7 @@ button{
                 );
                 
                 
-            });
+            }});
 		});
 		
     </script>
