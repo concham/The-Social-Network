@@ -368,7 +368,7 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 			if (subject==""){
 				errorsubject.innerHTML = "Please enter an Email";
 				}
-		else if{
+		else{
 				if ($('.school:checked').length) {
           			var schools = '';
           			$('.school:checked').each(function () {
