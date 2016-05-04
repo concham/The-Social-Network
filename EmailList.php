@@ -368,8 +368,24 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 			var message = document.getElementById("message").value;
 			var errorsubject=document.getElementById("subjecterror");
 			var errormessage = document.getElementById("messageerror");
-			if (subject==""){
-				errorsubject.innerHTML = "Please enter an Email";
+			var errorcheckbox= document.getElementById("checkboxerror");
+					
+	//checkbox validation
+  	var checkboxs=document.getElementsByName("school");
+    	var okay=false;
+    	for(var i=0,l=checkboxs.length;i<l;i++)
+    	{
+        if(checkboxs[i].checked)
+        {
+            okay=true;
+            break;
+        }
+    	}
+    		if (okay==false){
+    			errorcheckbox.innerHTML = "Please check a major"
+    		}
+			else if (subject==""){
+				errorsubject.innerHTML = "Please enter a subject";
 				}
 				else if (message=="") {
 				errormessage.innerHTML= "Please enter a message to send";
