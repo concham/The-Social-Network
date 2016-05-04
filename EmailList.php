@@ -365,9 +365,15 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 		$("#sendemail").click(function( event ){
 			event.preventDefault();
 			var subject = document.getElementById("subject").value;
+			var message = document.getElementById("message").value;
+			var errorsubject=document.getElementById("subjecterror");
+			var errormessage = document.getElementById("messageerror");
 			if (subject==""){
 				errorsubject.innerHTML = "Please enter an Email";
 				}
+				else if (message=="") {
+				errormessage.innerHTML= "Please enter a message to send";
+					}
 		else{
 				if ($('.school:checked').length) {
           			var schools = '';
