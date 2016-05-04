@@ -10,5 +10,10 @@ function validateEmail(){
 			erroremail.innerHTML = "";
 	
 			return true;
+<<<<<<< HEAD
 			}
 			
+=======
+}
+			
+>>>>>>> origin/master

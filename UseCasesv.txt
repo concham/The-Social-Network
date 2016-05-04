@@ -1,0 +1,44 @@
+1.	Create a Member 
+Actor – Member
+Precondition: You must not be a member, and have to click register here in the Login Page
+Insert into Member (membertype, firstname, lastname, email, password, school) values ('Student', 'Sharon', 'Butler', 'sbutler0@utexas.edu', '398ff1978d3f27e693815c1a061cddd0de12711a', 'Morrissey College of Arts & Sciences');
+http://cscilab.bc.edu/~kernanc/project/TheSocialNetwork/RegistrationForm.html
+
+2.	Delete a member account
+Actor – Administrator
+Precondition: Member must already exist in the Database
+Delete from Member where ID=1;
+
+3.	Create Comment
+Actor – Member
+Precondition: You need to already be a member to post a comment
+Insert into Comment (ID, comment, commentdate, recordnumber) values ('1', 'AABBCCDDEEFF', '02/02/2016', '1');
+
+4.	Delete a Comment
+Actor – Administrator
+Precondition: You need to already be a member to delete a comment
+Delete from comment where recordnumber=1;
+
+5.	Send Emails
+Actor – Member
+Precondition: You need to already be a member to send an email
+$sql = "SELECT email FROM member $selection";
+http://cscilab.bc.edu/~concham/Project/EmailTable.php
+
+6.	Request New Password
+Actor – Member
+Precondition: You need to already be a member request for new password 
+$query = "UPDATE community SET password='$newpassword' WHERE email='$email'";
+http://cscilab.bc.edu/~concham/Project/ProjectPasswordReset.html
+
+7.	Check all your own posts
+Actor – Member
+Actor – Member
+Precondition – You need to already be a member
+Select * from comment where ID=1;
+
+8.	Delete all comment records from a particular member
+Actor – Administrator
+Precondition: You need to already be a member to delete comments
+Delete from comment where ID=1;
+

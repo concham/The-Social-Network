@@ -12,7 +12,11 @@ function validatepassword(){
 			return true;
 			}
 			
+<<<<<<< HEAD
 	function validateconfirmation(){
+=======
+			function validateconfirmation(){
+>>>>>>> origin/master
 			var confirmation= document.getElementById("confirmation").value ;
 			
 			if (confirmation.length < 1) {
@@ -31,4 +35,8 @@ function validatepassword(){
 			errorconfirmation.innerHTML = "";
 	
 			return true;
+<<<<<<< HEAD
 			}
+=======
+			}
+>>>>>>> origin/master

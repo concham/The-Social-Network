@@ -1,60 +1,10 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Social Network</title>
-	<style>
-	body {
-	background-color: #ffddcc;
-	}
-h1 {
-	color: #ff7755;
-	text-align: center;
-	}
-form {
-	background-color: #ffddcc;
-	color: #ff7755; 
-
-}
-input{  
-margin-right: 950px;
-display: inline-block;
-float: right;
-}
-#bcseal{
-
-left: 20px;
-width: 200px;
-height: 200px;
-top: 155px;
-margin-left: 610px;
-/* margin-right: 500px; */
-}
-
-label {
-	color: #ff7755; 
-	font-size: 115%;
-
-}
-legend {
-	color: #ff7755; 
-	font-size: 140%;
-}
-.fieldset1 {
-	border: 3px solid #ff7755;	
-	height: 400px;
-	position: relative;
-	top: 10px;
-	overflow: auto; 
-}
-.fieldset2 {
-	border: 3px solid #ff7755;	
-	height: 200px;
-	position: relative;
-	top: 10px;
-}   
-</style>
-</head>
-<body>
-  <?php
+	<head>
+	<title> News </title>
+	</head>
+	<body>	
+	  <?php
   $feeds = array(
   				'http://www.thenecpaper.com/feed/',
   				'http://bcheights.com/feed/',
@@ -62,8 +12,9 @@ legend {
 				);
   
   ?>
-  <h1>Boston College Social Network</h1>
-  <img src= 'img/bcseal.jpg' alt='Boston College Seal' id= "bcseal" >
+  <h1>Latest News</h1>
+  <a href="LogoutCookie.php">Logout</a>
+  <img src= 'bcseal.jpg' alt='Boston College Seal' id= "bcseal" >
   <fieldset class="fieldset1">
   <legend> Campus News </legend>
 
@@ -76,9 +27,10 @@ legend {
   
   ?>
   </fieldset>
-  </body>
-</html>
-<?php
+	
+	
+	
+	<?php
 function handle_form( $myfeed ) {
 	  $rss = simplexml_load_file( $myfeed );
  	  
@@ -93,8 +45,7 @@ function handle_form( $myfeed ) {
       if (!$items)
         $items = $rss->item; # works other versions
       foreach ( $items as $item ) {
-      	echo "<div class='news'>
-      			<h2>$item->title<h2>\n";
+      	echo "<div class='news'>";
         echo '<a href="' . $item->link . '">' . $item->title . '</a><br>';
         echo $item->description . "<br><br>\n";
         echo "</div>";
