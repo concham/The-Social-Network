@@ -13,13 +13,13 @@
 <br>
 
 <ul class="nav nav-tabs" style>
-<li><a href="http://cscilab.bc.edu/~concham/Project/homepage960.html" data-toggle="tab"><font color="F5DEB3">Home</font></a></li>
-<li><a href="http://cscilab.bc.edu/~concham/Project/news960.php?" data-toggle="tab"><font color="F5DEB3">Get BC News!</font></a></li>
-<li class="active"><a href="http://cscilab.bc.edu/~concham/Project/EmailList.php?" data-toggle="tab"><font color="F5DEB3">Send Email</font></a></li>
-<li><a href="http://cscilab.bc.edu/~concham/Project/messageboard960.html" data-toggle="tab"><font color="F5DEB3">Comment</font></a></li>
-<li class="disabled"><a href="http://cscilab.bc.edu/~concham/Project/newlogin960.php" data-toggle="tab"><font color="F5DEB3">Log In</font></a></li>
-<li class="disabled"><a href="http://cscilab.bc.edu/~concham/Project/registrationform960.html" data-toggle="tab"><font color="F5DEB3">Create Account</font></a></li>
-<li><a href="http://cscilab.bc.edu/~concham/Project/passwordreset960.html" data-toggle="tab"><font color="F5DEB3">Reset Password</font></a></li>
+<li><a href="http://cscilab.bc.edu/~barthch/csciproject960/homepage960.html" data-toggle="tab"><font color="F5DEB3">Home</font></a></li>
+<li><a href="http://cscilab.bc.edu/~barthch/csciproject960/news960.php" data-toggle="tab"><font color="F5DEB3">Get BC News!</font></a></li>
+<li class="active"><a href="http://cscilab.bc.edu/~barthch/csciproject960/EmailList.php" data-toggle="tab"><font color="F5DEB3">Send Email</font></a></li>
+<li><a href="http://cscilab.bc.edu/~barthch/csciproject960/messageboard960.php" data-toggle="tab"><font color="F5DEB3">Comment</font></a></li>
+<li class="disabled"><a href="http://cscilab.bc.edu/~barthch/csciproject960/newlogin960.php" data-toggle="tab"><font color="F5DEB3">Log In</font></a></li>
+<li class="disabled"><a href="http://cscilab.bc.edu/~barthch/csciproject960/registrationform960.html" data-toggle="tab"><font color="F5DEB3">Create Account</font></a></li>
+<li><a href="http://cscilab.bc.edu/~barthch/csciproject960/passwordreset960.html" data-toggle="tab"><font color="F5DEB3">Reset Password</font></a></li>
 
 </ul>
 <br>
