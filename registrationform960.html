@@ -167,7 +167,7 @@ function validate() {
 
 function validateEmail(){
 	var email = document.getElementById("email");
-		if (email == "") {
+		if (email === "") {
 			var erroremail = document.getElementById("emailerror");
 			erroremail.innerHTML = "Please enter an Email";
 			return false;
@@ -176,7 +176,7 @@ function validateEmail(){
 
 function validateFirstName(){
 	var firstname = document.getElementById("FirstName");
-		if (firstname == "") {
+		if (firstname === "") {
 			var errorfirstname = document.getElementById("firstnameerror");
 			errorfirstname.innerHTML = "Please enter a first name";
 			return false;
@@ -185,7 +185,7 @@ function validateFirstName(){
 
 function validateLastName(){
 	var lastname = document.getElementById("LastName");
-		if (lastname == "") {
+		if (lastname === "") {
 			var errorlastname = document.getElementById("lastnameerror");
 			errorlastname.innerHTML = "Please enter a last name";
 			return false;
@@ -194,7 +194,7 @@ function validateLastName(){
 
 function validatePassword(){
 	var password = document.getElementById("password");
-		if (password == "") {
+		if (password === "") {
 			var errorpassword = document.getElementById("passworderror");
 			errorpassword.innerHTML = "Please enter a password";
 			return false;
@@ -203,7 +203,7 @@ function validatePassword(){
 			
 function validateConfirmation(){
 	var confirmation = document.getElementById("confirmation");
-		if ((confirmation == "") || (confirmation !== password))  {
+		if ((confirmation === "") || (confirmation !== password))  {
 			var errorconfirmation = document.getElementById("confirmationerror");
 			errorconfirmation.innerHTML = "Invalid password confirmation";
 			return false;
