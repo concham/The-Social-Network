@@ -133,8 +133,39 @@ button{
 		$(document).ready(function(){
 			$("#registerbutton").click(function( event ){
 				event.preventDefault();
-            	
+            		var firstname = document.getElementById("firstname").value;
+			var lastname = document.getElementById("lastname").value;
+			var email = document.getElementById("email").value;
+			var password = document.getElementById("password").value;
+			var confirmation = document.getElementById("confirmation").value;
+			var firstnameerror=document.getElementById("firstnameerror");
+			var lastnameerror = document.getElementById("lastnameerror");
+			var emailerror= document.getElementById("emailerror");
+			var passworderror= document.getElementById("passworderror");
+			var confirmationerror= document.getElementById("confirmationerror");
+			var confirmationerror2= document.getElementById("confirmationerror2");
+			var membertypeerror= document.getElementById("membertypeerror")
+			var schoolerror= document.getElementById("schoolerror")
     			
+    			if (firstname=="") {
+    				firstnameerror.innerHTML = "Please enter your first name.";
+			}
+			else if (lastname=="") {
+    				lastnameerror.innerHTML = "Please enter your last name.";
+			}
+			else if (email=="") {
+    				emailerror.innerHTML = "Please enter your email.";
+			}
+			else if (password=="") {
+    				passworderror.innerHTML = "Please enter a subject.";
+			}
+			else if (confirmation=="") {
+    				confirmationerror.innerHTML = "Please enter a subject.";
+			}
+			else if (confirmation!=password) {
+				confirmationerror2.innerHTML = "Password must be the same as confirmation.";
+			}
+			else{
                 //start ajax request
                 var request = $.post("registrationhandler960.php",
                     { 
@@ -152,7 +183,7 @@ button{
                 );
                 
                 
-            });
+            }});
 		});
 		
     </script>
