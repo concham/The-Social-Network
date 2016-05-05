@@ -8,7 +8,7 @@ if ( ! isset( $_POST['email'] ) or
  } else { 
 	// Store the login information in cookies	
 	setcookie('loginCookieUser', $_POST['email']);
-  	header("Location: homepage960.html");
+  	header("Location: homepage960.php");
 }
 // checklogin sees if an entry exists with the name password pair passed.
 // returns true if so, false otherwise.
