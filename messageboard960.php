@@ -198,11 +198,17 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 		$(document).ready(function(){
 			$("#commentbutton").click(function( event ){
 				event.preventDefault();
+				
+		var comment = document.getElementById("comment").value;
+		var commentdate = document.getElementById("commentdate").value;
+		var commenterror=document.getElementById("firstnameerror");
+		
+		
 		
                 var request = $.post("commenthandler.php",
                     { 
                     	comment: $("#comment").val(),
-                    	date: $('#commentdate').val()
+                    	
                     },
                     function(data,status) {      		
                 		$("#results").html("data" + data + " status", status);
