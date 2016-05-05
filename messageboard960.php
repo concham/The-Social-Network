@@ -35,7 +35,7 @@
 
 <?php
 function createDataTable($start, $itemsPerPage, $links){
-	$qry = "SELECT ID, comment, commentdate FROM Comment
+	$qry = "SELECT ID, comment FROM Comment
 				ORDER BY {$links['orderby']}
 				LIMIT $start, $itemsPerPage";
 		
@@ -43,7 +43,7 @@ function createDataTable($start, $itemsPerPage, $links){
 				<tr>
 					<th class=\"commenttable\"><a href={$links['ID']}>Comment #</a></th>
 					<th class=\"commenttable\"><a href={$links['comment']}>Comment</a></th>
-					<th class=\"commenttable\"><a href={$links['commentdate']}>Comment Date</a></th>
+					
 				</tr>\n";
 				
 				
@@ -55,7 +55,7 @@ function createDataTable($start, $itemsPerPage, $links){
 		echo "	<tr class=\"$class\">
 					<td>$ID</td>
 					<td>$comment</td>
-					<td>$commentdate</td>
+					
 				</tr>\n";
 	}
 	echo "</table>\n";
@@ -92,7 +92,6 @@ function findstart(){
 function createSortLinks(){
 	$IDlink = "{$_SERVER['PHP_SELF']}?sort=IDA";
 	$commentlink = "{$_SERVER['PHP_SELF']}?sort=commentA";
-	$commentdatelink = "{$_SERVER['PHP_SELF']}?sort=commentdateA";    
 	$orderby="ID ASC";
 	
 	$sort = isset($_GET['sort']) ? $_GET['sort']: "IDD" ;
@@ -105,16 +104,6 @@ function createSortLinks(){
 		case 'commentD':
 			$orderby='comment DESC';
 			$commentlink = "{$_SERVER['PHP_SELF']}?sort=commentA";
-			break;
-		
-		case 'commentdateA':
-			$orderby='commentdate ASC';
-			$commentdatelink = "{$_SERVER['PHP_SELF']}?sort=commentdateD";
-			break;
-	
-		case 'commentdateD':
-			$orderby='commentdate DESC';
-			$commentdatelink = "{$_SERVER['PHP_SELF']}?sort=commentdateA";
 			break;
 			
 		case 'IDA':
@@ -130,7 +119,7 @@ function createSortLinks(){
 	}
 	$links = array(	"ID"=> $IDlink,
 					"comment"=> $commentlink,
-					"commentdate"=> $commentdatelink,
+					
 					"orderby" => $orderby);
 					
 	return $links;
@@ -185,9 +174,7 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
   		<p>Your Comment</p>
   		<textarea rows="5" cols="100" id="comment" placeholder="Enter your comment here"></textarea>
   		<br><br>
-  		<p>Today's Date: mm/dd/yyyy</p>
-  		<input type="text" name="commentdate" id="commentdate" placeholder="Today's date" />
-  		<br> <br>
+  		
 
   		<button id="commentbutton">Post</button>
   	</form>
@@ -200,15 +187,14 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 				event.preventDefault();
 				
 		var comment = document.getElementById("comment").value;
-		var commentdate = document.getElementById("commentdate").value;
 		var commenterror=document.getElementById("firstnameerror");
 		
 		
 		
                 var request = $.post("commenthandler.php",
                     { 
-                    	comment: $("#comment").val(),
-                    	date: $('#commentdate').val()
+                    	comment: $("#comment").val()
+                    	
                     },
                     function(data,status) {      		
                 		$("#results").html("data" + data + " status", status);
