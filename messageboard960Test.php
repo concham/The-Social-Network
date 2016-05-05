@@ -4,6 +4,7 @@
 	<meta charset="utf-8" />
 	<title> Message Board </title>
 	 	<link rel ="stylesheet" href="css/bootW.css">
+
 </head>
 
 <body style="padding:20px;">
@@ -29,11 +30,11 @@
 <fieldset>
 		<legend>Comment Database</legend>
 
-<form class="navbar-form navbar-left" role="search">
+<form class="navbar-form navbar-left" role="search" method="get">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search" >
+          <input type="text" name="searchterm" class="form-control" placeholder="Search" >
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <input class="btn btn-default" type="submit" value="Submit"/>
       </form>
 <br><br>
   	<form id="ajaxRequestForm" method="post">
@@ -49,7 +50,23 @@
 		
 	$links = createSortLinks();
 	
-	createDataTable($start, $itemsPerPage, $links);
+		if (isset($_GET['searchterm'])) {
+		$trm = $_GET['searchterm'];
+		$full = "SELECT ID, comment FROM Comment
+				where ID like '%".$trm."%'
+				ORDER BY {$links['orderby']}
+				LIMIT $start, $itemsPerPage";
+	}
+	else {
+		$full = "SELECT ID, comment FROM Comment
+				ORDER BY {$links['orderby']}
+				LIMIT $start, $itemsPerPage";
+	}
+
+	
+	
+	
+	createDataTable($full, $start, $itemsPerPage, $links);
 	
 	 echo '</div>
 	 	</div></div>
@@ -62,11 +79,11 @@
 
 
 <?php
-function createDataTable($start, $itemsPerPage, $links){
-	$qry = "SELECT ID, comment FROM Comment
-				ORDER BY {$links['orderby']}
-				LIMIT $start, $itemsPerPage";
-		
+function createDataTable($query, $start, $itemsPerPage, $links){
+// 	$qry = "SELECT ID, comment FROM Comment
+// 				ORDER BY {$links['orderby']}
+// 				LIMIT $start, $itemsPerPage";
+// 		
 	echo "<center><table style='width:60%;' class=\"table\">
 				<tr>
 					<th class=\"commenttable\"><a href={$links['ID']}>Comment #</a></th>
@@ -76,7 +93,7 @@ function createDataTable($start, $itemsPerPage, $links){
 				
 				
 	$dbc = connect_to_db("kernanc");
-	$result = perform_query($dbc, $qry);
+	$result = perform_query($dbc, $query);
 	$class = "alt2";
 	while (@extract(mysqli_fetch_array($result, MYSQLI_ASSOC))) {
 		$class = ($class=='alt1' ? 'alt2':'alt1');
