@@ -9,23 +9,26 @@
 </head>
 <body>
 <body style="padding:20px;">
+		<div class="nav grid_7" align="right">
+					<font color="DAA520"><a href="http://cscilab.bc.edu/~concham/Project/homepage960.html"><font color="F5DEB3">Home</font></a> / <a href="http://www.bc.edu/"><font color="F5DEB3">Stay Connected</font></a> / <a href="https://mail.google.com/"> <font color="F5DEB3">Contact Us</font></a> / <a href="LogoutCookie.php"><font color="F5DEB3">Logout</font></a></font>
+				</div>
+
 <h1> Boston College Email List </h1>
-  <a href="LogoutCookie.php">Logout</a>
-  <br><br>
-  <a href="homepage960.html">Return to Home</a>
 <br>
 
 <ul class="nav nav-tabs" style>
 <li><a href="http://cscilab.bc.edu/~barthch/csciproject960/homepage960.html" data-toggle="tab"><font color="F5DEB3">Home</font></a></li>
 <li><a href="http://cscilab.bc.edu/~barthch/csciproject960/news960.php" data-toggle="tab"><font color="F5DEB3">Get BC News!</font></a></li>
 <li class="active"><a href="http://cscilab.bc.edu/~barthch/csciproject960/EmailList.php" data-toggle="tab"><font color="F5DEB3">Send Email</font></a></li>
-<li><a href="http://cscilab.bc.edu/~barthch/csciproject960/messageboard960.php" data-toggle="tab"><font color="F5DEB3">Comment</font></a></li>
+<li><a href="http://cscilab.bc.edu/~barthch/csciproject960/messageboard960.php" data-toggle="tab"><font color="F5DEB3">Message Borard</font></a></li>
 <li class="disabled"><a href="http://cscilab.bc.edu/~barthch/csciproject960/newlogin960.php" data-toggle="tab"><font color="F5DEB3">Log In</font></a></li>
 <li class="disabled"><a href="http://cscilab.bc.edu/~barthch/csciproject960/registrationform960.html" data-toggle="tab"><font color="F5DEB3">Create Account</font></a></li>
 <li><a href="http://cscilab.bc.edu/~barthch/csciproject960/passwordreset960.html" data-toggle="tab"><font color="F5DEB3">Reset Password</font></a></li>
 
 </ul>
 <br>
+	<fieldset>
+		<legend>Email Database</legend>
 <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search" >
@@ -33,7 +36,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       
-      
+      <br>
       
       
       
@@ -121,8 +124,7 @@ tr:hover{background-color: #ff7755;}
 	
 	</style>
 
-	<fieldset>
-		<legend>Email Database</legend>
+
 <?php
 	
 	$itemsPerPage=10;
@@ -144,8 +146,7 @@ tr:hover{background-color: #ff7755;}
 	echo  	"</div>";
 ?>
 
-</body>
-</html>
+
 <?php
 function createDataTable($start, $itemsPerPage, $links){
 	$qry = "SELECT firstname, lastname, school, email FROM Member
@@ -354,7 +355,7 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 		<input type="checkbox" name="school" class="school" id="theology" value="School of Theology & Ministry"> <font color="F5DEB3">School of Theology & Ministry </font><br>
 		<div id="checkboxerror"> </div>
 	<br>
-		<button id="sendemail" class="btn btn-danger">Send</button>
+		<button id="sendemail" class="btn btn-default">Send</button>
 	</form>
 	</fieldset>
 	<div id="results"></div>

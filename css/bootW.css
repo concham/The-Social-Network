@@ -12,3 +12,6 @@
      .carousel-inner{
        // height: 300px;
     }
+fieldset{
+overflow: auto;
+}

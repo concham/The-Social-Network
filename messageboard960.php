@@ -1,15 +1,118 @@
 <!DOCTYPE html>
-<html>
-	<head>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
 	<title> Message Board </title>
-	  <a href="LogoutCookie.php">Logout</a>
-  	<br><br>
-	 <a href="homepage960.html">Return to Home</a>
-	</head>
-	<body>
-	<h1> Message Board </h1>
+	 	<link rel ="stylesheet" href="css/bootW.css">
+</head>
+
+<body style="padding:20px;">
+		<div class="nav grid_7" align="right">
+					<font color="DAA520"><a href="http://cscilab.bc.edu/~concham/Project/homepage960.html"><font color="F5DEB3">Home</font></a> / <a href="http://www.bc.edu/"><font color="F5DEB3">Stay Connected</font></a> / <a href="https://mail.google.com/"> <font color="F5DEB3">Contact Us</font></a> / <a href="LogoutCookie.php"><font color="F5DEB3">Logout</font></a></font>
+				</div>
+
+<h1> The Social Network Message Board </h1>
+<br>
+
+<ul class="nav nav-tabs" style>
+<li><a href="http://cscilab.bc.edu/~barthch/csciproject960/homepage960.html" data-toggle="tab"><font color="F5DEB3">Home</font></a></li>
+<li><a href="http://cscilab.bc.edu/~barthch/csciproject960/news960.php" data-toggle="tab"><font color="F5DEB3">Get BC News!</font></a></li>
+<li class="active"><a href="http://cscilab.bc.edu/~barthch/csciproject960/EmailList.php" data-toggle="tab"><font color="F5DEB3">Send Email</font></a></li>
+<li><a href="http://cscilab.bc.edu/~barthch/csciproject960/messageboard960.php" data-toggle="tab"><font color="F5DEB3">Message Borard</font></a></li>
+<li class="disabled"><a href="http://cscilab.bc.edu/~barthch/csciproject960/newlogin960.php" data-toggle="tab"><font color="F5DEB3">Log In</font></a></li>
+<li class="disabled"><a href="http://cscilab.bc.edu/~barthch/csciproject960/registrationform960.html" data-toggle="tab"><font color="F5DEB3">Create Account</font></a></li>
+<li><a href="http://cscilab.bc.edu/~barthch/csciproject960/passwordreset960.html" data-toggle="tab"><font color="F5DEB3">Reset Password</font></a></li>
+
+</ul>
+<br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<style>
+body {
+	background-color: #92000a;
+	color: #ff7755; 
+	}
+h1 {
+	color: #DAA520;
+	text-align: center;
+	}
+.style1 {
+	width: 50%;
+	border-color: #ff7755;
+	background-color: #ff7755;
+	height: 1px;
+}
+.style2 {
+	width: 90%;
+	border-color: #ff7755;
+	background-color: #ff7755;
+	height: 1px;
+}
+form {
+	background-color: #92000a;
+}
+label {
+	color: #DAA520; 
+	font-size: 115%;
+}
+legend {
+	color: #DAA520; 
+	font-size: 140%;
+}
+.fieldset1 {
+	border: 3px solid #ff9977;
+	height: 300px;
+	width: 1175px;
+}
+.fieldset2 {
+	border: 3px solid #ff9977;
+
+	width: 1175px;
+}
+.button1 {
+	background-color: white;
+	border: 2px color: black;
+	font-size: 14px;
+	margin-left: 7px;
+}
+.style3 {
+	display: none;
+}
+table{
+	border-collapse: collapse;
+-webkit-column-width: 100px;
+}
+table, th, td {
+	border: 1px solid black;
+	width: 100%;
+	text-align: center;
+
+}
+th{
+	height: 10px;
+	text-align: center;
+}
+th, td{
+	resize: both;
+	width: 200px;
+	}
+tr:nth-child(even){background-color: #ffcc99; color: #cc0000;}
+tr:nth-child(odd){background-color: #ff9977; color: #F5DEB3;}
+tr:hover{background-color: #ff7755;}
+
+	
+	</style>
+<fieldset>
+		<legend>Comment Database</legend>
+
+<form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" >
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+<br><br>
   	<form id="ajaxRequestForm" method="post">
-  	
+  	<br><br>
   	<?php
 	include('dbconn.php');
 ?>
@@ -39,7 +142,7 @@ function createDataTable($start, $itemsPerPage, $links){
 				ORDER BY {$links['orderby']}
 				LIMIT $start, $itemsPerPage";
 		
-	echo "<table class=\"table\">
+	echo "<center><table style='width:60%;' class=\"table\">
 				<tr>
 					<th class=\"commenttable\"><a href={$links['ID']}>Comment #</a></th>
 					<th class=\"commenttable\"><a href={$links['comment']}>Comment</a></th>
@@ -58,7 +161,7 @@ function createDataTable($start, $itemsPerPage, $links){
 					
 				</tr>\n";
 	}
-	echo "</table>\n";
+	echo "</table></center>\n";
 }
 function findpages($itemsPerPage){
 	if (isset($_GET['p'])){
@@ -146,17 +249,23 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 		}
 		
 		// print page numbers
+		?> 
+		<div class="btn-toolbar">
+  <div class="btn-group">	
+		<?php
 		for ($i=1; $i <= $pages; $i++) {
 				if ($i != $currentPage) {
 					echo '<a href="'.$thispage.'?s='.(($itemsPerPage * ($i-1))) . 
 												'&amp;p=' . $pages . 
 												'&amp;sort=' . $sort .
-												'"> '. $i .'  </a>'."</li>\n";
+												'" class="btn btn-default btn-xs"> '. $i .'  </a>'."</li>\n";
 				}  else {
 				
 					echo "<class=\"active\"><span class=\"sr-only\">$i </span></a>";
 				}
 		}
+			?> </div>
+		<?php
 	
 		// print next if not on the last page
 		if ($currentPage != $pages){
@@ -168,18 +277,19 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 				</nav>';
 	}
 }
-?>
-<br>
-<br>
-  		<p>Your Comment</p>
-  		<textarea rows="5" cols="100" id="comment" placeholder="Enter your comment here"></textarea>
+?></fieldset>
+
+	<fieldset>
+		<legend>Post A Comment</legend>
+
+
+  		<textarea rows="5" style="background-color:#faedd6" cols="100" id="comment" placeholder="Enter Your Comment Here!"></textarea>
   		<br><br>
   		
 
-  		<button id="commentbutton">Post</button>
+  		<button id="commentbutton" class="btn btn-default">Post</button>
   	</form>
-	</body>
-</html>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -199,3 +309,30 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
             });
 		});
 	</script>
+	
+	       		<div class="nav grid_7" align="left">
+<hr>
+            <div class="col-md-6 col-xs-12">
+                <nav class="">
+                    <ul>
+<font color="F5DEB3">
+							<a href="http://www.bc.edu/sites/accessibility.html">Accessibility       </a>|
+                            <a href="http://www.bc.edu/emergency">       Emergency       </a>| 
+                            <a href="http://www.bc.edu/bc-web/about/maps-and-directions.html">       Maps       </a>|
+                            <a href="https://portal.bc.edu/portal/page/portal/Public/PublicDirectorySearch">       Directories       </a>|
+                            <a href="http://www.bc.edu/a-z/directories/contact.html">       Contact       </a></font>
+ 
+                    </ul>
+                </nav>
+            </div>
+
+                <div class="copyright text-right">
+                  <font color="F5DEB3">  Copyright &copy; 2016 Trustees of Boston College </font>
+
+
+<br><br><b><u><center>    <a href="#"><font color="DAA520">Back To Top</font></a></center></u></b>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
