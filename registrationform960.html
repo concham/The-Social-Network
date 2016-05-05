@@ -65,7 +65,7 @@ button{
 		
 		<label>You are a: </label>
 		<br><br>
-		<input type="radio" name="membertype" value="Student"> Student
+		<input type="radio" name="membertype" value="Student" checked="checked"> Student
 		<br><br>
 		<input type="radio" name="membertype" value="Staff"> Staff
 		<br>
@@ -157,10 +157,10 @@ button{
     				emailerror.innerHTML = "Please enter your email.";
 			}
 			else if (password=="") {
-    				passworderror.innerHTML = "Please enter a subject.";
+    				passworderror.innerHTML = "Please enter a password.";
 			}
 			else if (confirmation=="") {
-    				confirmationerror.innerHTML = "Please enter a subject.";
+    				confirmationerror.innerHTML = "Please confirm your password.";
 			}
 			else if (confirmation!=password) {
 				confirmationerror2.innerHTML = "Password must be the same as confirmation.";
@@ -191,62 +191,5 @@ button{
 </body>
 </html>
 
-<!-- 
-<script>
-document.getElementById("registerbutton").addEventListener("click", validate);
 
-function validate() {
-    validateEmail();
-    validateFirstName();
-    validateLastName();
-    validatePassword();
-    validateConfirmation();
-}
-
-function validateEmail(){
-	var email = document.getElementById("email");
-		if (email === "") {
-			var erroremail = document.getElementById("emailerror");
-			erroremail.innerHTML = "Please enter an email";
-			return false;
-		}
-}
-
-function validateFirstName(){
-	var firstname = document.getElementById("FirstName");
-		if (firstname === "") {
-			var errorfirstname = document.getElementById("firstnameerror");
-			errorfirstname.innerHTML = "Please enter a first name";
-			return false;
-		} 
-}
-
-function validateLastName(){
-	var lastname = document.getElementById("LastName");
-		if (lastname === "") {
-			var errorlastname = document.getElementById("lastnameerror");
-			errorlastname.innerHTML = "Please enter a last name";
-			return false;
-		}
-}
-
-function validatePassword(){
-	var password = document.getElementById("password");
-		if (password === "") {
-			var errorpassword = document.getElementById("passworderror");
-			errorpassword.innerHTML = "Please enter a password";
-			return false;
-		}
-}
-			
-function validateConfirmation(){
-	var confirmation = document.getElementById("confirmation");
-		if ((confirmation === "") || (confirmation !== password))  {
-			var errorconfirmation = document.getElementById("confirmationerror");
-			errorconfirmation.innerHTML = "Invalid password confirmation";
-			return false;
-		}
-}
-</script>
- -->
 
