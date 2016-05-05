@@ -187,7 +187,7 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 				event.preventDefault();
 				
 		var comment = document.getElementById("comment").value;
-		var commenterror=document.getElementById("firstnameerror");
+
 		
 		
 		
