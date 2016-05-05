@@ -11,7 +11,7 @@
 					<font color="DAA520"><a href="http://cscilab.bc.edu/~concham/Project/homepage960.html"><font color="F5DEB3">Home</font></a> / <a href="http://www.bc.edu/"><font color="F5DEB3">Stay Connected</font></a> / <a href="https://mail.google.com/"> <font color="F5DEB3">Contact Us</font></a> / <a href="LogoutCookie.php"><font color="F5DEB3">Logout</font></a></font>
 				</div>
 
-<h1> The Social Network Message Board </h1>
+<h1> The Social Network Anonymous Message Board </h1>
 <br>
 
 <ul class="nav nav-tabs">
