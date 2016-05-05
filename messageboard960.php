@@ -208,7 +208,7 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
                 var request = $.post("commenthandler.php",
                     { 
                     	comment: $("#comment").val(),
-                    	
+                    	date: $('#commentdate').val()
                     },
                     function(data,status) {      		
                 		$("#results").html("data" + data + " status", status);
