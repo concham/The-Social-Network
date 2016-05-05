@@ -19,70 +19,25 @@
 <h1 align=center> Boston College Latest News </h1>
 <br>
 
-<ul class="nav nav-tabs" style>
-
-<li><a href="http://cscilab.bc.edu/~concham/Project/homepage960.html" data-toggle="tab" style=".navbar-toggle:focus{background-color:#272b2e}"><font color="F5DEB3">Home</font></a></li>
-<li class="active"><a href="http://cscilab.bc.edu/~concham/Project/news960.php?" data-toggle="tab"><font color="F5DEB3">Get BC News!</font></a></li>
-<li class="disabled"><a href="" data-toggle="tab"><font color="F5DEB3">Send Email</font></a></li>
-<li class="disabled"><a href="" data-toggle=""><font color="F5DEB3">Message Borard</font></a></li>
-<li><a href="http://cscilab.bc.edu/~concham/Project/newlogin960.php" data-toggle="tab"><font color="F5DEB3">Log In</font></a></li>
-<li><a href="http://cscilab.bc.edu/~concham/Project/registrationform960.html" data-toggle="tab"><font color="F5DEB3">Create Account</font></a></li>
-<li class="disabled"><a href="" data-toggle="tab"><font color="F5DEB3">Reset Password</font></a></li>
-
+<ul class="nav nav-tabs">
+	<li><a href="http://cscilab.bc.edu/~concham/Project/homepage960.html" >Home</a></li>
+	<li><a href="http://cscilab.bc.edu/~concham/Project/news960.php" >Get BC News!</a></li>
+	<li><a href="http://cscilab.bc.edu/~concham/Project/EmailList.php" >Send Email</a></li>
+	<li><a href="http://cscilab.bc.edu/~concham/Project/messageboard960.php" >Message Board</a></li>
+	<li><a href="http://cscilab.bc.edu/~concham/Project/newlogin960.php" >Log In</a></li>
+	<li><a href="http://cscilab.bc.edu/~concham/Project/registrationform960.html">Create Account</a></li>
+	<li><a href="http://cscilab.bc.edu/~concham/Project/passwordreset960.html">Reset Password</a></li>
 </ul>
 
 <style>
-body {
-	background-color: #92000a;
-	color: #ff7755; 
-	}
-h1 {
-	color: #DAA520;
-	text-align: center;
-	}
-.style1 {
-	width: 50%;
-	border-color: #ff7755;
-	background-color: #ff7755;
-	height: 1px;
-}
-.style2 {
-	width: 90%;
-	border-color: #ff7755;
-	background-color: #ff7755;
-	height: 1px;
-}
-form {
-	background-color: #92000a;
-}
-label {
-	color: #DAA520; 
-	font-size: 115%;
-}
-legend {
-	color: #DAA520; 
-	font-size: 140%;
-}
 .fieldset1 {
-
+	border: 0px solid #ff9977;
 	height: 300px;
 	width: 1175px;
 		overflow: auto; 
+		
 }
-.fieldset2 {
-	border: 3px solid #ff9977;
 
-	width: 1175px;
-}
-.button1 {
-	background-color: white;
-	border: 2px color: black;
-	font-size: 14px;
-	margin-left: 7px;
-}
-.style3 {
-	display: none;
-}	
 	</style>
 
 <br><br>			

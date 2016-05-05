@@ -14,93 +14,18 @@
 <h1> The Social Network Message Board </h1>
 <br>
 
-<ul class="nav nav-tabs" style>
-<li><a href="http://cscilab.bc.edu/~barthch/csciproject960/homepage960.html" data-toggle="tab"><font color="F5DEB3">Home</font></a></li>
-<li><a href="http://cscilab.bc.edu/~barthch/csciproject960/news960.php" data-toggle="tab"><font color="F5DEB3">Get BC News!</font></a></li>
-<li class="active"><a href="http://cscilab.bc.edu/~barthch/csciproject960/EmailList.php" data-toggle="tab"><font color="F5DEB3">Send Email</font></a></li>
-<li><a href="http://cscilab.bc.edu/~barthch/csciproject960/messageboard960.php" data-toggle="tab"><font color="F5DEB3">Message Borard</font></a></li>
-<li class="disabled"><a href="http://cscilab.bc.edu/~barthch/csciproject960/newlogin960.php" data-toggle="tab"><font color="F5DEB3">Log In</font></a></li>
-<li class="disabled"><a href="http://cscilab.bc.edu/~barthch/csciproject960/registrationform960.html" data-toggle="tab"><font color="F5DEB3">Create Account</font></a></li>
-<li><a href="http://cscilab.bc.edu/~barthch/csciproject960/passwordreset960.html" data-toggle="tab"><font color="F5DEB3">Reset Password</font></a></li>
-
+<ul class="nav nav-tabs">
+	<li><a href="http://cscilab.bc.edu/~concham/Project/homepage960.html" >Home</a></li>
+	<li><a href="http://cscilab.bc.edu/~concham/Project/news960.php" >Get BC News!</a></li>
+	<li><a href="http://cscilab.bc.edu/~concham/Project/EmailList.php" >Send Email</a></li>
+	<li><a href="http://cscilab.bc.edu/~concham/Project/messageboard960.php" >Message Board</a></li>
+	<li><a href="http://cscilab.bc.edu/~concham/Project/newlogin960.php" >Log In</a></li>
+	<li><a href="http://cscilab.bc.edu/~concham/Project/registrationform960.html">Create Account</a></li>
+	<li><a href="http://cscilab.bc.edu/~concham/Project/passwordreset960.html">Reset Password</a></li>
 </ul>
 <br>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<style>
-body {
-	background-color: #92000a;
-	color: #ff7755; 
-	}
-h1 {
-	color: #DAA520;
-	text-align: center;
-	}
-.style1 {
-	width: 50%;
-	border-color: #ff7755;
-	background-color: #ff7755;
-	height: 1px;
-}
-.style2 {
-	width: 90%;
-	border-color: #ff7755;
-	background-color: #ff7755;
-	height: 1px;
-}
-form {
-	background-color: #92000a;
-}
-label {
-	color: #DAA520; 
-	font-size: 115%;
-}
-legend {
-	color: #DAA520; 
-	font-size: 140%;
-}
-.fieldset1 {
-	border: 3px solid #ff9977;
-	height: 300px;
-	width: 1175px;
-}
-.fieldset2 {
-	border: 3px solid #ff9977;
 
-	width: 1175px;
-}
-.button1 {
-	background-color: white;
-	border: 2px color: black;
-	font-size: 14px;
-	margin-left: 7px;
-}
-.style3 {
-	display: none;
-}
-table{
-	border-collapse: collapse;
--webkit-column-width: 100px;
-}
-table, th, td {
-	border: 1px solid black;
-	width: 100%;
-	text-align: center;
-
-}
-th{
-	height: 10px;
-	text-align: center;
-}
-th, td{
-	resize: both;
-	width: 200px;
-	}
-tr:nth-child(even){background-color: #ffcc99; color: #cc0000;}
-tr:nth-child(odd){background-color: #ff9977; color: #F5DEB3;}
-tr:hover{background-color: #ff7755;}
-
-	
-	</style>
 <fieldset>
 		<legend>Comment Database</legend>
 
