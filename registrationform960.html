@@ -2,15 +2,37 @@
 <html lang="en" xml:lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>The Social Network: Registration</title>
+	<title>Registration Form</title>
+
+<link rel ="stylesheet" href="css/bootW.css">
+
+</head>
+
+<body style="padding:20px;">
+<div class="nav grid_7" align="right">
+					<font color="DAA520"><a href="http://cscilab.bc.edu/~concham/Project/homepage960.html"><font color="F5DEB3">Home</font></a> / <a href="http://www.bc.edu/"><font color="F5DEB3">Stay Connected</font></a> / <a href="https://mail.google.com/"> <font color="F5DEB3">Contact Us</font></a> / <a href="LogoutCookie.php"><font color="F5DEB3">Logout</font></a></font>
+				</div>
+<h1 align=center> The Social Network Registration Form </h1>
+<br>
+
+<ul class="nav nav-tabs" style>
+<li><a href="http://cscilab.bc.edu/~concham/Project/homepage960.html" data-toggle="tab"><font color="F5DEB3">Home</font></a></li>
+<li><a href="http://cscilab.bc.edu/~concham/Project/news960.php?" data-toggle="tab"><font color="F5DEB3">Get BC News!</font></a></li>
+<li class="disabled"><a href="http://cscilab.bc.edu/~concham/Project/EmailList.php?" data-toggle="tab"><font color="F5DEB3">Send Email</font></a></li>
+<li class="disabled"><a href="http://cscilab.bc.edu/~concham/Project/messageboard960.html" data-toggle="tab"><font color="F5DEB3">Comment</font></a></li>
+<li><a href="http://cscilab.bc.edu/~concham/Project/newlogin960.php" data-toggle="tab"><font color="F5DEB3">Log In</font></a></li>
+<li class="active"><a href="http://cscilab.bc.edu/~concham/Project/registrationform960.html" data-toggle="tab"><font color="F5DEB3">Create Account</font></a></li>
+<li class="disabled"><a href="http://cscilab.bc.edu/~concham/Project/passwordreset960.html" data-toggle="tab"><font color="F5DEB3">Reset Password</font></a></li>
+
+</ul>
 
 <style>
 body {
-	background-color: #ffddcc;
-	color: #ff7755;
+	background-color: #92000a;
+	color: #ff7755; 
 	}
 h1 {
-	color: #ff7755;
+	color: #DAA520;
 	text-align: center;
 	}
 .style1 {
@@ -26,37 +48,199 @@ h1 {
 	height: 1px;
 }
 form {
-	background-color: #ffccbb;
+	background-color: #92000a;
 }
 label {
-	color: #ff7755; 
+	color: #DAA520; 
 	font-size: 115%;
 }
-legend {
-	color: #ff7755; 
+h2 {
+	color: #DAA520; 
 	font-size: 140%;
 }
-fieldset {
-	border: 3px solid #ff9977;	
-	}
-.input1 {
-  margin-right: 300px;
+.fieldset1 {
+	border: 3px solid #ff9977;
+	height: 300px;
+	width: 1175px;
 }
-button{
+.fieldset2 {
+	border: 3px solid #ff9977;
+
+	width: 1175px;
+}
+.button1 {
 	background-color: white;
 	border: 2px color: black;
-	font-size: 15px;
-	margin-left: 20px;
+	font-size: 14px;
+	margin-left: 7px;
 }
-	
+.style3 {
+	display: none;
+}	
 	</style>
 
-</head>
 
-<h1> The Social Network</h1>
-
-<hr class="style1"><hr class="style2">
 <br>
+	<fieldset>
+	<form id="ajaxRequestForm" method="post">
+		<legend> Fill Out The Form To Join!</legend>
+		<br>
+		
+		<label>You are a: </label>
+		<br><br>
+		<input type="radio" name="membertype" value="Student" checked="checked"> Student
+		<br><br>
+		<input type="radio" name="membertype" value="Staff"> Staff
+		<br>
+		<p id="membertypeerror"></p>
+		<br>
+		
+		<label for="firstname">First Name: </label>
+		<input type="text" name="firstname" id="firstname" size="30" hspace="5" class="input1"/>
+		<br>
+		<p id="firstnameerror"></p>
+		<br>
+		
+		<label for="lastname">Last Name: </label>
+		<input type="text" name="lastname" id="lastname" size="30" hspace="5" class="input1"/>
+		<br>
+		<p id="lastnameerror"></p>
+		<br>
+
+		<label for="email">BC E-Mail Address: </label>
+		<input type="text" name="email" id="email" size="30" hspace="5" class="input1"/>
+		<br>
+		<p id="emailerror"></p>
+		<br>
+		
+		<label for="password">Password: </label>
+		<input type="password" name="password" id="password" size="30" hspace="5" class="input1"/>
+		<br>
+		<p id="passworderror"></p>
+		<br>
+		<label for="confirmation">Confirm Password: </label>
+		<input type="password" name="confirmation" id="confirmation" size="30" hspace="5" class="input1"/>
+		<p id="confirmationerror"></p>
+		<p id="confirmationerror2"></p>
+		<br>
+		<br><br>
+		<label>Select the name of your school: </label>
+		<br><br>
+		<input type="radio" name="school" value="Morrissey College of Arts & Sciences" checked class="input2"> Morrissey College of Arts & Sciences 
+		<br><br>
+		<input type="radio" name="school" value="Law School" class="input2"> Law School
+		<br><br>
+		<input type="radio" name="school" value="Woods College of Advancing Studies"> Woods College of Advancing Studies
+		<br><br>
+		<input type="radio" name="school" value="School of Social Work"> School of Social Work
+		<br><br>
+		<input type="radio" name="school" value="Carroll School of Management"> Carroll School of Management
+		<br><br>
+		<input type="radio" name="school" value="Connell School of Nursing"> Connell School of Nursing
+		<br><br>
+		<input type="radio" name="school" value="Lynch School of Education"> Lynch School of Education
+		<br><br>
+		<input type="radio" name="school" value="School of Theology & Ministry"> School of Theology & Ministry
+		<br><br>
+		<button id="registerbutton"> Join Now!</button>
+		<br>
+		<p id="schoolerror"></p>
+		<br>
+		<a href="http://cscilab.bc.edu/~barthch/csciproject960/newlogin960.php">Return to Login</a>
+	</form>
+	</fieldset> 
+	<div id="results"></div>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#registerbutton").click(function( event ){
+				event.preventDefault();
+            		var firstname = document.getElementById("firstname").value;
+			var lastname = document.getElementById("lastname").value;
+			var email = document.getElementById("email").value;
+			var password = document.getElementById("password").value;
+			var confirmation = document.getElementById("confirmation").value;
+			var firstnameerror=document.getElementById("firstnameerror");
+			var lastnameerror = document.getElementById("lastnameerror");
+			var emailerror= document.getElementById("emailerror");
+			var passworderror= document.getElementById("passworderror");
+			var confirmationerror= document.getElementById("confirmationerror");
+			var confirmationerror2= document.getElementById("confirmationerror2");
+			var membertypeerror= document.getElementById("membertypeerror")
+			var schoolerror= document.getElementById("schoolerror")
+    			
+    			if (firstname=="") {
+    				firstnameerror.innerHTML = "Please enter your first name.";
+			}
+			else if (lastname=="") {
+    				lastnameerror.innerHTML = "Please enter your last name.";
+			}
+			else if (email=="") {
+    				emailerror.innerHTML = "Please enter your email.";
+			}
+			else if (password=="") {
+    				passworderror.innerHTML = "Please enter a password.";
+			}
+			else if (confirmation=="") {
+    				confirmationerror.innerHTML = "Please confirm your password.";
+			}
+			else if (confirmation!=password) {
+				confirmationerror2.innerHTML = "Password must be the same as confirmation.";
+			}
+			else{
+                //start ajax request
+                var request = $.post("registrationhandler960.php",
+                    { 
+                    	membertype: $("input[name='membertype']:checked").val(),
+                    	firstname: $("#firstname").val(),
+                    	lastname: $("#lastname").val(),
+                    	email: $("#email").val(),
+                    	password: $("#password").val(),
+                    	confirmation: $("#confirmation").val(),
+                    	school: $("input[name='school']:checked").val()
+                    },
+                    function(data,status) {      		
+                		$("#results").html("data" + data + " status", status);
+                	}
+                );
+                
+                
+            }});
+		});
+		
+    </script>
+    
+        		<div class="nav grid_7" align="left">
+
+<br<br>
+<br>
+<hr>
+            <div class="col-md-6 col-xs-12">
+                <nav class="">
+                    <ul>
+<font color="F5DEB3">
+							<a href="http://www.bc.edu/sites/accessibility.html">Accessibility       </a>|
+                            <a href="http://www.bc.edu/emergency">       Emergency       </a>| 
+                            <a href="http://www.bc.edu/bc-web/about/maps-and-directions.html">       Maps       </a>|
+                            <a href="https://portal.bc.edu/portal/page/portal/Public/PublicDirectorySearch">       Directories       </a>|
+                            <a href="http://www.bc.edu/a-z/directories/contact.html">       Contact       </a></font>
+ 
+                    </ul>
+                </nav>
+            </div>
+
+                <div class="copyright text-right">
+                  <font color="F5DEB3">  Copyright &copy; 2016 Trustees of Boston College </font>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
+
+
 
 	<fieldset>
 	<form id="ajaxRequestForm" method="post">

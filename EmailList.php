@@ -417,7 +417,30 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 	});
 	
 </script>
+        		<div class="nav grid_7" align="left">
+<hr>
+            <div class="col-md-6 col-xs-12">
+                <nav class="">
+                    <ul>
+<font color="F5DEB3">
+							<a href="http://www.bc.edu/sites/accessibility.html">Accessibility       </a>|
+                            <a href="http://www.bc.edu/emergency">       Emergency       </a>| 
+                            <a href="http://www.bc.edu/bc-web/about/maps-and-directions.html">       Maps       </a>|
+                            <a href="https://portal.bc.edu/portal/page/portal/Public/PublicDirectorySearch">       Directories       </a>|
+                            <a href="http://www.bc.edu/a-z/directories/contact.html">       Contact       </a></font>
+ 
+                    </ul>
+                </nav>
+            </div>
 
+                <div class="copyright text-right">
+                  <font color="F5DEB3">  Copyright &copy; 2016 Trustees of Boston College </font>
+
+
+<br><br><b><u><center>    <a href="#"><font color="DAA520">Back To Top</font></a></center></u></b>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 	
 </body>
 </html>
