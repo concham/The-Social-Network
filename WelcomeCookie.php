@@ -6,6 +6,7 @@
 		header("Location: homepage960.html");
 	} else {
 		$outstr = "<h2 align=center> User not logged in";
+		header("Location: WelcomeCookie.php");
 	}			
 ?>
 
@@ -21,9 +22,6 @@
 <body>
 
 <?php echo $outstr; ?></h2>
-
-<form method=POST action="logoutCookie.php">
-<input type=submit value="Logout">
-</form>
+<a href="newlogin960.php">Return to Login</a>
 </body>
 </html>
