@@ -185,16 +185,10 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 		$(document).ready(function(){
 			$("#commentbutton").click(function( event ){
 				event.preventDefault();
-				
-		var comment = document.getElementById("comment").value;
-
-		
-		
 		
                 var request = $.post("CommentHandler.php",
                     { 
                     	comment: $("#comment").val()
-                    	
                     },
                     function(data,status) {      		
                 		$("#results").html("data" + data + " status", status);
