@@ -90,8 +90,8 @@ function displayLoginForm($email, $password)
 		<br>
 				<br>
 		
-	<p><font color="DAA520">Don't have an account? </font><a href="http://cscilab.bc.edu/~barthch/csciproject960/registrationform960.html"> Register Here! </a> </p>
-	<p><font color="DAA520">Forgot Your Password? </font><a href="http://cscilab.bc.edu/~barthch/csciproject960/passwordreset960.html"> Click Here! </a> </p>
+	<p><font color="DAA520">Don't have an account? </font><a href="http://cscilab.bc.edu/~concham/Project/registrationform960.html"> Register Here! </a> </p>
+	<p><font color="DAA520">Forgot Your Password? </font><a href="http://cscilab.bc.edu/~concham/Project/passwordreset960.html"> Click Here! </a> </p>
 	</form>
 	</fieldset>
 <?php }
