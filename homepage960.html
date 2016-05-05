@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title> BC News </title>
+	<title> The Social Network Home Page </title>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 			<link rel="stylesheet"  href="bootstrap/css/bootstrap.min.css">
 		<link rel ="stylesheet" href="css/bootW.css">
@@ -13,12 +13,11 @@
 </head>
 
 		<div class="nav grid_7" align="right">
-					<font color="DAA520"><a href="#home"><font color="F5DEB3">Home</font></a> / <a href="http://www.bc.edu/"><font color="F5DEB3">Stay Connected</font></a> / <a href="https://mail.google.com/"> <font color="F5DEB3">Contact Us</font></a> / <a href="LogoutCookie.php"><font color="F5DEB3">Logout</font></a></font>
+					<font color="DAA520"><a href="http://cscilab.bc.edu/~concham/Project/homepage960.html"><font color="F5DEB3">Home</font></a> / <a href="http://www.bc.edu/"><font color="F5DEB3">Stay Connected</font></a> / <a href="https://mail.google.com/"> <font color="F5DEB3">Contact Us</font></a> / <a href="LogoutCookie.php"><font color="F5DEB3">Logout</font></a></font>
 				</div>
 <body style="padding:20px;">
-<h1 align=center> Boston College Latest News </h1>
+<h1 align=center> Boston College The Social Network </h1>
 <br>
-
 <ul class="nav nav-tabs">
 	<li><a href="http://cscilab.bc.edu/~concham/Project/homepage960.html" >Home</a></li>
 	<li><a href="http://cscilab.bc.edu/~concham/Project/news960.php" >Get BC News!</a></li>
@@ -28,19 +27,17 @@
 	<li><a href="http://cscilab.bc.edu/~concham/Project/registrationform960.html">Create Account</a></li>
 	<li><a href="http://cscilab.bc.edu/~concham/Project/passwordreset960.html">Reset Password</a></li>
 </ul>
+<!-- F5DEB3 -->
 
-<style>
-.fieldset1 {
-	border: 0px solid #ff9977;
-	height: 300px;
-	width: 1175px;
-		overflow: auto; 
-		
-}
 
-	</style>
-
+<!-- 
+		<div class="header" >
+			<div class="container_12">
+				<div class="grid_1">
+ -->
 <br><br>			
+				
+				
 				
 				<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
   <!-- Indicators -->
@@ -51,50 +48,46 @@
     <li data-target="#myCarousel" data-slide-to="3"></li>
   </ol>
 
-  <div class="carousel-inner" role="listbox" >
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img class="first-slide center-block" src="bcseal.jpg" alt="Boston College Logo" class="img-rounded" height="300" width="300">
+      <img class="first-slide center-block" src="pic1.jpg" alt="Bapst Art Library" class="img-rounded" height="600" width="600">
        <div class="container">
        <div class="carousel-caption">
-      	<h3></h3>
+      	<h3>Bapst Art Library</h3>
       	</div>
     </div>
     </div>
 
     <div class="item">
-    <br>    <br>    <br>    <br>    <br>    <br>
-      <img class="second-slide center-block" src="pic5.jpg" alt="NEC News" height="300" width="600">
-      <br>    <br><br>    <br><br>
+      <img class="second-slide center-block" src="pic2.jpg" alt="St. Mary's Hall" height="600" width="600">
        <div class="container">
        <div class="carousel-caption">
-      	<h3></h3>
+      	<h3>St. Mary's Hall</h3>
       </div>
     </div>
     </div>
 
     <div class="item">
-          <br>    <br><br>    <br>
-      <img class="third-slide center-block" src="pic6.jpg" alt="Boston College Campus" height="600" width="600">
-      <br>    <br><br>    <br>
+      <img class="third-slide center-block" src="pic3.jpg" alt="Boston College Campus" height="600" width="600">
        <div class="container">
        <div class="carousel-caption">
-      	<h3></h3>
+      	<h3>Boston College Campus</h3>
       </div>
     </div>
     </div>
 
     <div class="item">
-    <br>    <br><br>    <br>    
-      <img class="fourth-slide center-block" src="pic7.jpg" alt="Stokes Hall" height="600" width="600" >
-<br>    <br><br>    
+      <img class="fourth-slide center-block" src="pic4.jpg" alt="Stokes Hall" height="600" width="600" >
        <div class="container">
        <div class="carousel-caption">
-      	<h3></h3>
+      	<h3>Stokes Hall</h3>
       </div>
     </div>
   </div>
   </div>
 
+  <!-- Left and right controls -->
   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -104,77 +97,60 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+ 
 <br><br>
 
 
 
-	  <?php
-  $feeds = array(
-  				'http://www.thenecpaper.com/feed/',
-  				'http://bcheights.com/feed/',
-  				'http://bcgavel.com/feed/'
-				);
-  
-  ?>
-  
-  <fieldset class="fieldset1">
-  <legend> Campus News </legend>
+<footer role="footer">
 
-  <?php
-  create_form($feeds, "feed");
-  
-  if ( isset( $_GET['getfeed'] ) ) {
-  	handle_form( $_GET['feed'] );	
-  }
-  
-  ?>
-  </fieldset>
-	
-	
-	
-	<?php
-function handle_form( $myfeed ) {
-	  $rss = simplexml_load_file( $myfeed );
- 	  
-      $title =  $rss->channel->title;
-      echo "<h1>$title</h1>";
-      # I would like to do this:
-      #     foreach ($rss->channel->item as $item) {
-      # or this:
-      #     foreach ($rss->item as $item) {
-      # but which one depends on the rss version in use.
-      $items = $rss->channel->item; # try, works some versions
-      if (!$items)
-        $items = $rss->item; # works other versions
-      foreach ( $items as $item ) {
-      	echo " <div class='news' >";
-        echo '<a href="' . $item->link . '">' . $item->title . '</a><br>';
-        echo $item->description . "<br><br>\n";
-        echo "</div>";
-      }
-}
-function create_form( $farray, $menuname ){
-?>
-<form method="get">
-	<?php create_menu( $farray, $menuname ); ?>
-	 &nbsp; <input type="submit"  class="btn btn-default" name="getfeed" value="Get News!">
-</form>
-<?php
-}
-function create_menu($farray, $menuname){
-	$current_feed = isset( $_GET['feed'] ) ?  $_GET['feed'] : "";
-	echo "<select name='$menuname'>";
-	foreach ( $farray as $f ) {
-		if ( $current_feed == $f )  {
-			echo "<option value='$f' selected>$f</option>";
-		} else {
-			echo "<option value='$f'>$f</option>";
-		}
-	}
-	echo '</select>';
-}
-?>
+	<div class="">
+	 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+	 <a href="/content/bc-web.html">
+	 	<img src="BostonCollege.png" class="footer-logo" alt="Boston College" height="100" width="100"/>
+	 </a>
+            <br><br>
+	<div class=""><font color="DAA520">
+                <span>140 Commonwealth Avenue<br/></span>
+                <span>Chestnut Hill, MA 02467<br/></span>
+                <span>Call&#x3a; 617-552-8000<br/></span>
 
+        <div class="list-group" >
+                <br>
+		  <a href="http://www.bc.edu/" class="list-group-item"  style="width: 33%; background-color: #F5DEB3; border-color: #DAA520; color: #92000a;"><b>Visit Boston College Website!</b>
+		  </a>
+		  <a href="https://portal.bc.edu/portal/page/portal/MyServices/Login" class="list-group-item" style="width: 33%; background-color: #F5DEB3; border-color: #DAA520; color: #92000a;"><b>Visit Agora Portal!</b>
+		  </a>
+		  <a href="https://login.bc.edu/cas/login?service=https%3A%2F%2Flogin.bc.edu%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De1s1&entityId=http%3A%2F%2Fbostoncollege.instructure.com%2Fsaml2" class="list-group-item" style="width: 33%; background-color: #F5DEB3; border-color: #DAA520; color: #92000a;"><b>Visit Canvas!</a></b>
+		  
+		</div>
+    </div>
+	
+</div>
+    
+    
+    <div class="col-sm-4">
+<!-- 
+  	 &nbsp; <h4><font color="DAA520">Connect With Us</font></h4>
+    
+
+<a href="https://www.facebook.com/BostonCollege"><img class="first-slide center-block" src="pic10.png" alt="Facebook" height="50" width="50"></a>
+<a href="https://twitter.com/bostoncollege" class="icon-twitter"><img class="first-slide center-block" src="pic11.png" alt="Twitter" height="50" width="50"></a>
+<a href="https://instagram.com/bostoncollege/" class="icon-instagram"><img class="first-slide center-block" src="pic12.png" alt="Instagram" height="50" width="50"></a>
+ -->
+
+        
+<br>
+
+</div></div>
+
+
+
+<div class="iparys_inherited"><div class="parsys iparsys footer-par"></div>
+
+<br>
+
+	
         		<div class="nav grid_7" align="left">
 <hr>
             <div class="col-md-6 col-xs-12">
@@ -204,5 +180,6 @@ function create_menu($farray, $menuname){
 		interval: 5000
 	})
 </script>
+
 	</body>
 </html>

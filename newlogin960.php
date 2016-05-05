@@ -15,10 +15,10 @@
 <br>
 
 <ul class="nav nav-tabs">
-	<li><a href="http://cscilab.bc.edu/~concham/Project/homepage960.html" >Home</a></li>
-	<li><a href="http://cscilab.bc.edu/~concham/Project/news960.php" >Get BC News!</a></li>
-	<li><a href="http://cscilab.bc.edu/~concham/Project/EmailList.php" >Send Email</a></li>
-	<li><a href="http://cscilab.bc.edu/~concham/Project/messageboard960.php" >Message Board</a></li>
+	<li class="disabled"><a href="" >Home</a></li>
+	<li class="disabled"><a href="" >Get BC News!</a></li>
+	<li class="disabled"><a href="" >Send Email</a></li>
+	<li class="disabled"><a href="" >Message Board</a></li>
 	<li><a href="http://cscilab.bc.edu/~concham/Project/newlogin960.php" >Log In</a></li>
 	<li><a href="http://cscilab.bc.edu/~concham/Project/registrationform960.html">Create Account</a></li>
 	<li><a href="http://cscilab.bc.edu/~concham/Project/passwordreset960.html">Reset Password</a></li>
