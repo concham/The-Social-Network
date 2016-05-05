@@ -67,6 +67,7 @@ legend {
 
 	height: 300px;
 	width: 1175px;
+		overflow: auto; 
 }
 .fieldset2 {
 	border: 3px solid #ff9977;

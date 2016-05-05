@@ -174,8 +174,12 @@ function createDataTable($start, $itemsPerPage, $links){
 					<td>$email</td>
 				</tr>\n";
 	}
+
+
 	echo "</table>\n";
 }
+
+
 function findpages($itemsPerPage){
 	if (isset($_GET['p'])){
 		// get it from the URL if we've already been here
@@ -307,8 +311,7 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 					echo "<class=\"active\"><span class=\"sr-only\">$i </span></a>";
 				}
 		}
-		?> </div>
-		<?php
+	 
 	
 		// print next if not on the last page
 		if ($currentPage != $pages){
