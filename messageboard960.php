@@ -191,7 +191,7 @@ function createPageLinks($start, $pages, $itemsPerPage, $sort){
 		
 		
 		
-                var request = $.post("commenthandler.php",
+                var request = $.post("CommentHandler.php",
                     { 
                     	comment: $("#comment").val()
                     	
